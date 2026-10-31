@@ -2,7 +2,8 @@
 
 Usage: python src/verification.py --project-root . --check-models
 No training is performed. By default JSON evidence is written to
-results/audit/integration_verification.json.
+runs/verification/integration_verification.json, so the submitted reference
+record in results/audit/ is not overwritten.
 """
 from __future__ import annotations
 
@@ -159,7 +160,7 @@ def main():
     parser.add_argument('--check-models', action='store_true')
     args = parser.parse_args()
     root = args.project_root.resolve()
-    output = args.output or root / 'results/audit/integration_verification.json'
+    output = args.output or root / 'runs/verification/integration_verification.json'
     try:
         report = verify(root, args.check_models)
     except Exception as error:
