@@ -1,0 +1,9 @@
+{
+  "xgboost_metric_export": "PASS: all three subsets recomputed from probabilities",
+  "xgboost_training_selection": "PASS: mean AP selection matches fixed 5-fold scores",
+  "logistic_regression": "PASS: row IDs/labels/folds, 38 OOF grid rows, tie rule, sigmoid OOF refits, final calibrator refit and test transforms, four final test rows",
+  "random_forest": "PASS: row IDs/labels/folds, 38 OOF grid rows, tie rule, sigmoid OOF refits, final calibrator refit and test transforms, four final test rows",
+  "xgboost": "PASS: row IDs/labels/folds, 38 OOF grid rows, tie rule, sigmoid OOF refits, final calibrator refit and test transforms, four final test rows",
+  "status": "PASS",
+  "scope": "Independent recomputation of exported results; does not convert selected-model OOF or shared temporal transfer into strict nested/temporal validation."
+}

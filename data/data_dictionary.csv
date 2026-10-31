@@ -1,0 +1,33 @@
+Feature,Data Type,Missing Values,Unique Values,Role,Description,Cleaning Notes
+row_id,int64,0,118564,Identifier,Unique row identifier created during data preparation.,Keep for merging and split alignment; exclude from model input.
+hotel,str,0,2,Predictor,Type of hotel: City Hotel or Resort Hotel.,
+is_canceled,int64,0,2,Target,"Cancellation outcome: 1 = canceled, 0 = not canceled.",Prediction target; exclude from model input.
+lead_time,int64,0,478,Predictor,Days between booking entry and scheduled arrival.,
+arrival_date_year,int64,0,3,Predictor,Scheduled arrival year.,
+arrival_date_month,str,0,12,Predictor,Scheduled arrival month.,
+arrival_date_week_number,int64,0,53,Predictor,Week number of scheduled arrival.,
+arrival_date_day_of_month,int64,0,31,Predictor,Day of month of scheduled arrival.,
+stays_in_weekend_nights,int64,0,17,Predictor,Number of scheduled weekend nights.,
+stays_in_week_nights,int64,0,33,Predictor,Number of scheduled weekday nights.,
+adults,int64,0,14,Predictor,Number of adults in the booking.,
+children,float64,0,5,Predictor,Number of children in the booking.,Missing values handled during data cleaning.
+babies,int64,0,5,Predictor,Number of babies in the booking.,
+meal,str,0,5,Predictor,Meal plan associated with the booking.,
+country,str,0,178,Predictor,Country of origin recorded for the guest.,Missing values handled during data cleaning. Verify availability at initial booking before final modeling.
+market_segment,str,0,8,Predictor,Market segment classification.,
+distribution_channel,str,0,5,Predictor,Booking distribution channel.,
+is_repeated_guest,int64,0,2,Predictor,Whether the guest is recorded as a repeat guest.,Verify availability at initial booking before final modeling.
+previous_cancellations,int64,0,15,Predictor,Number of previous canceled bookings.,Verify availability at initial booking before final modeling.
+previous_bookings_not_canceled,int64,0,73,Predictor,Number of previous non-canceled bookings.,Verify availability at initial booking before final modeling.
+reserved_room_type,str,0,9,Predictor,Room type originally reserved.,
+deposit_type,str,0,3,Excluded,Deposit arrangement recorded for the booking.,Verify availability at initial booking before final modeling.
+agent,str,0,334,Predictor,Travel agency identifier or missing-category value.,Missing values represented as a separate category. Verify availability at initial booking before final modeling.
+customer_type,str,0,4,Excluded,Customer category recorded for the booking.,Verify availability at initial booking before final modeling.
+adr,float64,0,8865,Excluded,Average daily rate recorded in the dataset.,Verify availability at initial booking before final modeling.
+required_car_parking_spaces,int64,0,5,Excluded,Number of requested parking spaces.,Excluded from the primary classification template; retained in the raw and cleaned datasets.
+total_of_special_requests,int64,0,6,Excluded,Number of special requests recorded.,Verify availability at initial booking before final modeling.
+total_guests,int64,0,14,Predictor,"Derived total number of adults, children, and babies.","Derived from adults, children, and babies."
+total_nights,int64,0,41,Predictor,Derived total number of weekend and weekday nights.,Derived from weekday and weekend nights.
+family_booking,int64,0,2,Predictor,Derived indicator for bookings with children or babies.,Derived from the presence of children or babies.
+lead_time_group,str,0,5,Predictor,Derived category based on booking lead time.,Derived from lead_time.
+arrival_season,str,0,4,Excluded,Derived season based on scheduled arrival month.,Derived from arrival month; not included in current preprocessing template.

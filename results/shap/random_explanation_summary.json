@@ -1,0 +1,300 @@
+{
+  "model_path": "results\\models\\random_forest_main.joblib",
+  "model_sha256": "64531ef1dd0bc1bf8bda9baea46322bbbe1a87cea40bc7cd3aef9cc5add0676f",
+  "model_name": "RandomForest",
+  "selected_tree_status": "RF candidate only; final team selection not supplied",
+  "output": "uncalibrated cancellation probability",
+  "positive_class": 1,
+  "background_n": 100,
+  "sample_n": 400,
+  "feature_perturbation": "interventional",
+  "approximate": false,
+  "base_probability": 0.3737530061139864,
+  "numeric_alignment": {
+    "policy": "sklearn_float32_inputs_and_floor32_thresholds_v1",
+    "background_dtype": "float32",
+    "changed_shap_thresholds": 344304,
+    "background_prediction_error": 2.6645352591003757e-15,
+    "max_threshold_adjustment": 2.86102294921875e-06,
+    "fitted_model_unchanged": true,
+    "shap_values_rescaled": false,
+    "all_float32_threshold_boundaries_verified": true,
+    "rationale": "For float32 RF inputs, threshold comparisons against t64 equal comparisons against the greatest float32 <= t64."
+  },
+  "max_additivity_error": 4.4876910632041245e-08,
+  "cases": [
+    {
+      "case": "low",
+      "row_id": 3423,
+      "y_true": 0,
+      "probability": 0.0,
+      "base_probability": 0.3737530061139864,
+      "sum_shap": -0.37375302310334846,
+      "reconstruction_error": 1.698936197280787e-08,
+      "hotel": "Resort Hotel",
+      "scheduled_arrival_date": "2015-12-05",
+      "contributions": [
+        {
+          "feature": "country",
+          "shap": -0.20693497438170688,
+          "observed_value": "ESP"
+        },
+        {
+          "feature": "arrival_date_year",
+          "shap": -0.06139604585915514,
+          "observed_value": 2015
+        },
+        {
+          "feature": "previous_cancellations",
+          "shap": -0.04101178864062291,
+          "observed_value": 0
+        },
+        {
+          "feature": "agent",
+          "shap": -0.03767073527268807,
+          "observed_value": "38"
+        },
+        {
+          "feature": "lead_time",
+          "shap": -0.010690347066661695,
+          "observed_value": 45
+        },
+        {
+          "feature": "meal",
+          "shap": -0.008800297493341967,
+          "observed_value": "Undefined"
+        },
+        {
+          "feature": "market_segment",
+          "shap": -0.007111993229120159,
+          "observed_value": "Groups"
+        },
+        {
+          "feature": "hotel",
+          "shap": -0.00611234574951622,
+          "observed_value": "Resort Hotel"
+        },
+        {
+          "feature": "lead_time_group",
+          "shap": -0.0048484759929715085,
+          "observed_value": "31-90 days"
+        },
+        {
+          "feature": "distribution_channel",
+          "shap": -0.0044352968160583555,
+          "observed_value": "TA/TO"
+        },
+        {
+          "feature": "previous_bookings_not_canceled",
+          "shap": 0.0043612450790658204,
+          "observed_value": 0
+        },
+        {
+          "feature": "arrival_date_week_number",
+          "shap": 0.004121906626697083,
+          "observed_value": 49
+        },
+        {
+          "feature": "stays_in_weekend_nights",
+          "shap": 0.002345502822247667,
+          "observed_value": 2
+        },
+        {
+          "feature": "arrival_date_month",
+          "shap": 0.0020023161129192057,
+          "observed_value": "December"
+        },
+        {
+          "feature": "adults",
+          "shap": 0.0016915651415873967,
+          "observed_value": 2
+        },
+        {
+          "feature": "total_guests",
+          "shap": 0.0015875868808894467,
+          "observed_value": 2
+        },
+        {
+          "feature": "reserved_room_type",
+          "shap": -0.0010151635815087445,
+          "observed_value": "A"
+        },
+        {
+          "feature": "total_nights",
+          "shap": -0.0009888207899249935,
+          "observed_value": 3
+        },
+        {
+          "feature": "arrival_date_day_of_month",
+          "shap": 0.0006773509195335592,
+          "observed_value": 5
+        },
+        {
+          "feature": "is_repeated_guest",
+          "shap": 0.0006366172613752497,
+          "observed_value": 0
+        },
+        {
+          "feature": "children",
+          "shap": -0.00022354451211242576,
+          "observed_value": 0.0
+        },
+        {
+          "feature": "stays_in_week_nights",
+          "shap": 0.00019566881624404785,
+          "observed_value": 1
+        },
+        {
+          "feature": "family_booking",
+          "shap": -0.00014566387042904693,
+          "observed_value": 0
+        },
+        {
+          "feature": "babies",
+          "shap": 1.2710491910183919e-05,
+          "observed_value": 0
+        }
+      ]
+    },
+    {
+      "case": "high",
+      "row_id": 75648,
+      "y_true": 1,
+      "probability": 1.0,
+      "base_probability": 0.3737530061139864,
+      "sum_shap": 0.626247018599347,
+      "reconstruction_error": 2.4713333379722258e-08,
+      "hotel": "City Hotel",
+      "scheduled_arrival_date": "2015-08-03",
+      "contributions": [
+        {
+          "feature": "previous_cancellations",
+          "shap": 0.34900814927610263,
+          "observed_value": 1
+        },
+        {
+          "feature": "country",
+          "shap": 0.20609862014706012,
+          "observed_value": "PRT"
+        },
+        {
+          "feature": "lead_time",
+          "shap": 0.05233938113361302,
+          "observed_value": 290
+        },
+        {
+          "feature": "arrival_date_year",
+          "shap": -0.04268825466719971,
+          "observed_value": 2015
+        },
+        {
+          "feature": "market_segment",
+          "shap": 0.029233157506774594,
+          "observed_value": "Groups"
+        },
+        {
+          "feature": "agent",
+          "shap": -0.02435424829586456,
+          "observed_value": "1"
+        },
+        {
+          "feature": "lead_time_group",
+          "shap": 0.01648535060702976,
+          "observed_value": "181+ days"
+        },
+        {
+          "feature": "distribution_channel",
+          "shap": 0.013224802242800315,
+          "observed_value": "TA/TO"
+        },
+        {
+          "feature": "previous_bookings_not_canceled",
+          "shap": 0.007883164418466891,
+          "observed_value": 0
+        },
+        {
+          "feature": "total_guests",
+          "shap": 0.004705465963996183,
+          "observed_value": 2
+        },
+        {
+          "feature": "total_nights",
+          "shap": 0.004506979041869954,
+          "observed_value": 4
+        },
+        {
+          "feature": "arrival_date_month",
+          "shap": 0.0038669917624043486,
+          "observed_value": "August"
+        },
+        {
+          "feature": "arrival_date_week_number",
+          "shap": 0.0038235193762533727,
+          "observed_value": 32
+        },
+        {
+          "feature": "adults",
+          "shap": 0.0029585965578633024,
+          "observed_value": 2
+        },
+        {
+          "feature": "stays_in_week_nights",
+          "shap": -0.0026470918508055873,
+          "observed_value": 3
+        },
+        {
+          "feature": "hotel",
+          "shap": -0.001825346922513713,
+          "observed_value": "City Hotel"
+        },
+        {
+          "feature": "is_repeated_guest",
+          "shap": 0.0011755413305110096,
+          "observed_value": 0
+        },
+        {
+          "feature": "stays_in_weekend_nights",
+          "shap": 0.0010899553712225797,
+          "observed_value": 1
+        },
+        {
+          "feature": "meal",
+          "shap": 0.0008155804780146703,
+          "observed_value": "BB"
+        },
+        {
+          "feature": "reserved_room_type",
+          "shap": 0.0003350039850522357,
+          "observed_value": "A"
+        },
+        {
+          "feature": "family_booking",
+          "shap": 0.00032248332086485474,
+          "observed_value": 0
+        },
+        {
+          "feature": "children",
+          "shap": -0.00018841885336442487,
+          "observed_value": 0.0
+        },
+        {
+          "feature": "babies",
+          "shap": 7.166183906122114e-05,
+          "observed_value": 0
+        },
+        {
+          "feature": "arrival_date_day_of_month",
+          "shap": 5.974830133919085e-06,
+          "observed_value": 3
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Predictive attribution, not causation.",
+    "Correlated and derived features share credit.",
+    "Independent perturbations can create unrealistic feature combinations.",
+    "400-row global summary is a sample estimate.",
+    "Model scores are not guaranteed calibrated probabilities."
+  ]
+}

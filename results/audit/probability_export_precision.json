@@ -1,0 +1,6 @@
+{
+  "decimals": 6,
+  "maximum_oof_raw_to_export_error": 5.000000001809113e-07,
+  "tolerance": 5.01e-07,
+  "note": "Parallel tree summation can differ at a decimal half-unit boundary. Compare raw scores with the six-decimal export at its half-unit precision."
+}

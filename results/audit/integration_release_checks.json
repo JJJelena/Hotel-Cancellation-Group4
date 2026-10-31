@@ -1,0 +1,40 @@
+{
+  "report_content_complete": true,
+  "pdf_pages": 9,
+  "official_style_files_match": {
+    "icml2026.sty": true,
+    "icml2026.bst": true,
+    "algorithm.sty": true,
+    "algorithmic.sty": true,
+    "fancyhdr.sty": true
+  },
+  "paper": "Letter 612x792 PDF points",
+  "body_font": "Times-compatible Nimbus Roman, official Times font family",
+  "predominant_font_size_pdf_points": 9.963,
+  "source_python_files_syntax_pass": 15,
+  "notebooks_syntax_pass": 16,
+  "code_cells_syntax_pass": 139,
+  "standard_prediction_verification": "PASS: six standard prediction tables and saved-model re-prediction",
+  "e_probability_verification": "PASS: XGBoost, 114 threshold-grid rows, 12 final test comparisons, sigmoid refits and transformations",
+  "visual_review": "all nine final page PNGs inspected; no clipping, table overflow or missing author fields",
+  "all_teacher_submission_requirements_satisfied": false,
+  "remaining_requirements": [
+    "Create and upload the actual GitHub repository, insert its URL and recompile the PDF",
+    "Record the required 15-minute all-member camera-on Zoom presentation and provide its recording URL/passcode"
+  ],
+  "report_sha256": "3cbe1efe86ef3f0be7b8e0e3d1c8aa278518ac8cb3b104bb2c700be9df5c701e",
+  "fonts": [
+    "/AKHCZK+CMR10",
+    "/BZIVMZ+NimbusRomNo9L-Regu",
+    "/CAFSZL+CMSY10",
+    "/DDIEWW+CMEX10",
+    "/FKPJSN+CMMI7",
+    "/IHAIZV+NimbusRomNo9L-Medi",
+    "/IXFAWU+NimbusMonL-Regu",
+    "/JAGKKY+CMR7",
+    "/PVTTLK+CMSY7",
+    "/TQTHRL+NimbusRomNo9L-ReguItal",
+    "/VDVGTR+CMMI9",
+    "/YEUUOC+CMMI10"
+  ]
+}

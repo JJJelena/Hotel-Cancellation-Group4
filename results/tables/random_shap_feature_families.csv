@@ -1,0 +1,5 @@
+family,members,mean_abs_summed_shap
+Lead time family,"lead_time,lead_time_group",0.0763312384989057
+Arrival calendar,"arrival_date_year,arrival_date_month,arrival_date_week_number,arrival_date_day_of_month",0.03693913185751121
+Stay length,"stays_in_weekend_nights,stays_in_week_nights,total_nights",0.013407609357439903
+Guest composition,"adults,children,babies,total_guests,family_booking",0.0067716830672642295

@@ -1,0 +1,11 @@
+{
+  "candidate": 0,
+  "parameters": {
+    "max_depth": 16,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt"
+  },
+  "criterion": "highest training CV mean average precision",
+  "cv_ap": 0.7892940730332443,
+  "scope": "chronological train only, expanding date windows"
+}

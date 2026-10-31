@@ -1,0 +1,58 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ant{\'o}nio et~al.(2019)Ant{\'o}nio, de~Almeida, and
+  Nunes]{antonio2019}
+Ant{\'o}nio, N., de~Almeida, A., and Nunes, L.
+\newblock Hotel booking demand datasets.
+\newblock \emph{Data in Brief}, 22:\penalty0 41--49, 2019.
+\newblock \doi{10.1016/j.dib.2018.11.126}.
+
+\bibitem[Breiman(2001)]{breiman2001}
+Breiman, L.
+\newblock Random forests.
+\newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, 2001.
+\newblock \doi{10.1023/A:1010933404324}.
+
+\bibitem[Chen \& Guestrin(2016)Chen and Guestrin]{chen2016}
+Chen, T. and Guestrin, C.
+\newblock {XGBoost}: A scalable tree boosting system.
+\newblock In \emph{Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pp.\  785--794. ACM, 2016.
+\newblock \doi{10.1145/2939672.2939785}.
+
+\bibitem[Kapoor \& Narayanan(2023)Kapoor and Narayanan]{kapoor2023}
+Kapoor, S. and Narayanan, A.
+\newblock Leakage and the reproducibility crisis in machine-learning-based
+  science.
+\newblock \emph{Patterns}, 4\penalty0 (9):\penalty0 100804, 2023.
+\newblock \doi{10.1016/j.patter.2023.100804}.
+
+\bibitem[Lundberg \& Lee(2017)Lundberg and Lee]{lundberg2017}
+Lundberg, S.~M. and Lee, S.-I.
+\newblock A unified approach to interpreting model predictions.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~30, 2017.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html}.
+
+\bibitem[{Scikit-learn Developers}(2026{\natexlab{a}})]{sklearnap}
+{Scikit-learn Developers}.
+\newblock {average\_precision\_score}.
+\newblock
+  \url{https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html},
+  2026{\natexlab{a}}.
+\newblock Accessed 31 October 2026.
+
+\bibitem[{Scikit-learn Developers}(2026{\natexlab{b}})]{sklearncalibration}
+{Scikit-learn Developers}.
+\newblock Probability calibration.
+\newblock \url{https://scikit-learn.org/stable/modules/calibration.html},
+  2026{\natexlab{b}}.
+\newblock Accessed 31 October 2026.
+
+\end{thebibliography}

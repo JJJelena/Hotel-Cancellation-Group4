@@ -1,0 +1,25 @@
+{
+  "data/hotel_bookings_clean.csv": {
+    "E_sha256": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb",
+    "D_sha256": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb",
+    "same": true
+  },
+  "data/splits/train_ids.csv": {
+    "E_sha256": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9",
+    "D_sha256": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9",
+    "same": true
+  },
+  "data/splits/test_ids.csv": {
+    "E_sha256": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0",
+    "D_sha256": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0",
+    "same": true
+  },
+  "data/splits/chronological_split.csv": {
+    "E_sha256": "9dea636a201f22584d699feeb340e98b857f3504021376687792270559c68459",
+    "D_sha256": "9dea636a201f22584d699feeb340e98b857f3504021376687792270559c68459",
+    "same": true
+  },
+  "metrics_recomputed_from_export": "all equal within 1e-12",
+  "XGB_vs_RF_row_label_hotel_fold_alignment": "all three subsets match exactly",
+  "no_test_used_for_selection": "training fixed folds choose parameters, OOF probabilities choose thresholds and sigmoid; test labels only evaluate"
+}

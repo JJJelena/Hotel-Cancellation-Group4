@@ -1,0 +1,15 @@
+{
+  "n_validation": 94851,
+  "n_test": 23713,
+  "folds": 5,
+  "threshold_grid": "0.05 to 0.95 in 0.05 steps",
+  "threshold_criterion": "Maximum selected-model training OOF F1; ties use smaller threshold",
+  "sigmoid": "Univariate logistic regression on clipped logit probabilities, C=1e6; cross-fitted across existing OOF folds for validation scores, fitted to all OOF pairs for test transformation",
+  "test_use": "Final evaluation only; test labels are never used for fitting or threshold selection",
+  "limitations": [
+    "OOF probabilities come from hyperparameter-selected models and are not nested CV.",
+    "Base OOF models share training rows, so cross-fitted calibration is a practical training diagnostic, not fully nested calibration validation.",
+    "Sigmoid mapping is estimated on OOF score distributions and applied to the full-training model scores.",
+    "Reported test results compare prespecified methods; no test-optimal threshold is selected."
+  ]
+}

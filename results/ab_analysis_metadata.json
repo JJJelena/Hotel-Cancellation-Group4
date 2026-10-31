@@ -1,0 +1,31 @@
+{
+  "fit_subset": "shared random training set only",
+  "fit_rows": 94851,
+  "assignment_rows": 118564,
+  "random_state": 42,
+  "n_init": 10,
+  "k": 5,
+  "cluster_inputs": [
+    "lead_time",
+    "total_nights",
+    "total_guests",
+    "adr",
+    "previous_cancellations_log"
+  ],
+  "outlier_caps_from_training": {
+    "adr": 252.0,
+    "total_guests": 4.0,
+    "lead_time": 476.0,
+    "total_nights": 14.0
+  },
+  "label_mapping": {
+    "4": 4,
+    "3": 3,
+    "1": 1,
+    "2": 2,
+    "0": 0
+  },
+  "outcome_used_for_fit_or_k_selection": false,
+  "k_selection_note": "The supplied training diagnostics give silhouette 0.3165 at k=3, 0.3032 at k=5 and 0.3049 at k=6; k=5 retains interpretable distinctions. This script reproduces the chosen k=5 fit.",
+  "profile_basis": "Uncapped original measurements; rates describe associations."
+}

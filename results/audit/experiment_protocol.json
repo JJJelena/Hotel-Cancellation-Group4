@@ -1,0 +1,89 @@
+{
+  "data_version": "A-v4",
+  "feature_count": 24,
+  "features": [
+    "lead_time",
+    "arrival_date_year",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "total_guests",
+    "total_nights",
+    "family_booking",
+    "hotel",
+    "arrival_date_month",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "reserved_room_type",
+    "agent",
+    "lead_time_group"
+  ],
+  "seed": 42,
+  "trees": 160,
+  "candidates": [
+    {
+      "max_depth": 16,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt"
+    },
+    {
+      "max_depth": 24,
+      "min_samples_leaf": 2,
+      "max_features": "sqrt"
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 2,
+      "max_features": "sqrt"
+    },
+    {
+      "max_depth": 16,
+      "min_samples_leaf": 5,
+      "max_features": 0.35
+    },
+    {
+      "max_depth": 24,
+      "min_samples_leaf": 2,
+      "max_features": 0.35
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 8,
+      "max_features": "sqrt"
+    }
+  ],
+  "selection": "highest mean training-only CV average precision; ties use candidate order",
+  "threshold": 0.5,
+  "class_weight": null,
+  "random_cv": "A-v4 cv_folds.csv, five stratified folds, shuffle=True, random_state=42",
+  "team_chronological": "C protocol: same random-CV-selected settings, refit chronological train; not a fully independent future holdout",
+  "strict_chronological": "independent parameter selection using five expanding windows of unique scheduled arrival dates within chronological TRAIN only",
+  "random_train_chronological_test_overlap": 17707,
+  "standard_export": "unchanged C evaluation.py; metrics recomputed from its six-decimal probability export",
+  "tuning_scores": "full precision mean AP; selected-parameter OOF is not nested CV",
+  "shap": "RF candidate; 400 random test rows seed=2026; 100 random train background rows seed=42; exact class-1 interventional probability SHAP",
+  "cases": "lowest and highest scores in explanation sample; outcomes not used in selection",
+  "agent_sensitivity": "drop agent with the same selected settings; diagnostic only; not retuned",
+  "duplicate_sensitivity": "unseen 24-feature profiles, plus equal total weight per unseen profile",
+  "parking_exclusion": "team precaution about initial-booking availability, not proof of leakage or causation",
+  "input_sha256": {
+    "data\\hotel_bookings_clean.csv": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb",
+    "data\\data_dictionary.csv": "729295bfc8c2b29685379537aac24f8a5ba802178fa60efb820958505b6da061",
+    "results\\models\\preprocessor_template.joblib": "817eb34fbf21f8f2f4ef4d8f96305b78424e7e71d2dd5b7521b46d5e26c92936",
+    "src\\evaluation.py": "33792183dc46254ca779dfa1bd6557e81c48acdb48cd5ce0ce76c83d8f809d3a",
+    "data\\splits\\chronological_split.csv": "9dea636a201f22584d699feeb340e98b857f3504021376687792270559c68459",
+    "data\\splits\\cv_folds.csv": "12f7f4e423038834658aa53b55467b069a0570080a76a278a5747144c6fe6917",
+    "data\\splits\\random_split.csv": "d54cf270acfb841ba0272eb084c248e72540f6503c4a613abc756718de44ac4b",
+    "data\\splits\\test_ids.csv": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0",
+    "data\\splits\\train_ids.csv": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9"
+  }
+}

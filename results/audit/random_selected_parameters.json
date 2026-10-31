@@ -1,0 +1,11 @@
+{
+  "candidate": 4,
+  "parameters": {
+    "max_depth": 24,
+    "min_samples_leaf": 2,
+    "max_features": 0.35
+  },
+  "criterion": "highest training CV mean average precision",
+  "cv_ap": 0.9079155487346933,
+  "scope": "random train with A fixed folds"
+}

@@ -1,0 +1,296 @@
+{
+  "hashes": {
+    "data/hotel_bookings_clean.csv": {
+      "A": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb",
+      "B": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb",
+      "D": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb"
+    },
+    "data/splits/train_ids.csv": {
+      "A": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9",
+      "B": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9",
+      "D": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9"
+    },
+    "data/splits/test_ids.csv": {
+      "A": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0",
+      "B": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0",
+      "D": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0"
+    },
+    "data/data_dictionary.csv": {
+      "A": "729295bfc8c2b29685379537aac24f8a5ba802178fa60efb820958505b6da061",
+      "B": "729295bfc8c2b29685379537aac24f8a5ba802178fa60efb820958505b6da061",
+      "D": "729295bfc8c2b29685379537aac24f8a5ba802178fa60efb820958505b6da061"
+    }
+  },
+  "dataset": {
+    "rows": 118564,
+    "columns": [
+      "row_id",
+      "hotel",
+      "is_canceled",
+      "lead_time",
+      "arrival_date_year",
+      "arrival_date_month",
+      "arrival_date_week_number",
+      "arrival_date_day_of_month",
+      "stays_in_weekend_nights",
+      "stays_in_week_nights",
+      "adults",
+      "children",
+      "babies",
+      "meal",
+      "country",
+      "market_segment",
+      "distribution_channel",
+      "is_repeated_guest",
+      "previous_cancellations",
+      "previous_bookings_not_canceled",
+      "reserved_room_type",
+      "deposit_type",
+      "agent",
+      "customer_type",
+      "adr",
+      "required_car_parking_spaces",
+      "total_of_special_requests",
+      "total_guests",
+      "total_nights",
+      "family_booking",
+      "lead_time_group",
+      "arrival_season"
+    ],
+    "target_counts": {
+      "0": 74388,
+      "1": 44176
+    },
+    "target_mean": 0.3725920178131642,
+    "nulls": 0,
+    "raw_duplicate_rows": 31994,
+    "clean_duplicate_rows": 33985,
+    "train": 94851,
+    "test": 23713,
+    "by_hotel": [
+      {
+        "hotel": "City Hotel",
+        "size": 78899,
+        "sum": 33066,
+        "mean": 0.4190927641668462
+      },
+      {
+        "hotel": "Resort Hotel",
+        "size": 39665,
+        "sum": 11110,
+        "mean": 0.2800958023446363
+      }
+    ],
+    "by_deposit": [
+      {
+        "deposit_type": "No Deposit",
+        "size": 103815,
+        "sum": 29646,
+        "mean": 0.2855656697009103
+      },
+      {
+        "deposit_type": "Non Refund",
+        "size": 14587,
+        "sum": 14494,
+        "mean": 0.9936244601357374
+      },
+      {
+        "deposit_type": "Refundable",
+        "size": 162,
+        "sum": 36,
+        "mean": 0.2222222222222222
+      }
+    ]
+  },
+  "clustering": {
+    "caps": {
+      "adr": 252.0,
+      "total_guests": 4.0,
+      "lead_time": 476.0,
+      "total_nights": 14.0
+    },
+    "cluster_features": [
+      "lead_time",
+      "total_nights",
+      "total_guests",
+      "adr",
+      "previous_cancellations_log"
+    ],
+    "fitted_train_only": true,
+    "full_profile": [
+      {
+        "cluster": 0,
+        "n": 59941,
+        "lead_time": 45.725379956957674,
+        "total_nights": 2.469711883351963,
+        "total_guests": 1.7252798585275522,
+        "adr": 88.96487078960979,
+        "previous_cancellations": 0.0,
+        "cancellation_rate": 0.28451310455281026
+      },
+      {
+        "cluster": 1,
+        "n": 18144,
+        "lead_time": 76.06668871252205,
+        "total_nights": 3.5926477072310408,
+        "total_guests": 2.9051477072310408,
+        "adr": 175.8298506393298,
+        "previous_cancellations": 0.0012125220458553791,
+        "cancellation_rate": 0.359457671957672
+      },
+      {
+        "cluster": 2,
+        "n": 19747,
+        "lead_time": 262.7768775003798,
+        "total_nights": 3.055755304603231,
+        "total_guests": 1.9321415911277662,
+        "adr": 92.2363022231225,
+        "previous_cancellations": 0.0,
+        "cancellation_rate": 0.5131918772471767
+      },
+      {
+        "cluster": 3,
+        "n": 14327,
+        "lead_time": 126.93969428352062,
+        "total_nights": 8.230194737209464,
+        "total_guests": 1.9612619529559572,
+        "adr": 92.46831367348364,
+        "previous_cancellations": 0.003350317582187478,
+        "cancellation_rate": 0.3204439170796398
+      },
+      {
+        "cluster": 4,
+        "n": 6405,
+        "lead_time": 197.00858704137391,
+        "total_nights": 2.647150663544106,
+        "total_guests": 1.7875097580015613,
+        "adr": 75.98093520686963,
+        "previous_cancellations": 1.6112412177985949,
+        "cancellation_rate": 0.9172521467603435
+      }
+    ],
+    "train_profile": [
+      {
+        "cluster": 0,
+        "size": 48016,
+        "sum": 13640,
+        "mean": 0.28407197600799733
+      },
+      {
+        "cluster": 1,
+        "size": 14410,
+        "sum": 5171,
+        "mean": 0.35884802220680084
+      },
+      {
+        "cluster": 2,
+        "size": 15837,
+        "sum": 8118,
+        "mean": 0.5125970827808297
+      },
+      {
+        "cluster": 3,
+        "size": 11487,
+        "sum": 3735,
+        "mean": 0.32515016975711675
+      },
+      {
+        "cluster": 4,
+        "size": 5101,
+        "sum": 4677,
+        "mean": 0.9168790433248383
+      }
+    ],
+    "test_profile": [
+      {
+        "cluster": 0,
+        "size": 11925,
+        "sum": 3414,
+        "mean": 0.28628930817610065
+      },
+      {
+        "cluster": 1,
+        "size": 3734,
+        "sum": 1351,
+        "mean": 0.36181039100160683
+      },
+      {
+        "cluster": 2,
+        "size": 3910,
+        "sum": 2016,
+        "mean": 0.5156010230179028
+      },
+      {
+        "cluster": 3,
+        "size": 2840,
+        "sum": 856,
+        "mean": 0.30140845070422534
+      },
+      {
+        "cluster": 4,
+        "size": 1304,
+        "sum": 1198,
+        "mean": 0.9187116564417178
+      }
+    ]
+  },
+  "splits": {
+    "train_test_overlap": 0,
+    "train_test_union": 118564,
+    "fold_columns": [
+      "row_id",
+      "cv_fold"
+    ],
+    "fold_rows": 94851,
+    "fold_unique_ids": 94851,
+    "chrono_columns": [
+      "row_id",
+      "scheduled_arrival_date",
+      "split"
+    ],
+    "chrono_counts": {
+      "train": 96428,
+      "test": 22136
+    }
+  },
+  "reproduction": {
+    "clean_columns_match": true,
+    "clean_mismatch_counts": {
+      "row_id": 0,
+      "hotel": 0,
+      "is_canceled": 0,
+      "lead_time": 0,
+      "arrival_date_year": 0,
+      "arrival_date_month": 0,
+      "arrival_date_week_number": 0,
+      "arrival_date_day_of_month": 0,
+      "stays_in_weekend_nights": 0,
+      "stays_in_week_nights": 0,
+      "adults": 0,
+      "children": 0,
+      "babies": 0,
+      "meal": 0,
+      "country": 0,
+      "market_segment": 0,
+      "distribution_channel": 0,
+      "is_repeated_guest": 0,
+      "previous_cancellations": 0,
+      "previous_bookings_not_canceled": 0,
+      "reserved_room_type": 0,
+      "deposit_type": 0,
+      "agent": 0,
+      "customer_type": 0,
+      "adr": 0,
+      "required_car_parking_spaces": 0,
+      "total_of_special_requests": 0,
+      "total_guests": 0,
+      "total_nights": 0,
+      "family_booking": 0,
+      "lead_time_group": 0,
+      "arrival_season": 0
+    },
+    "random_train_ids_match_in_order": true,
+    "random_test_ids_match_in_order": true,
+    "cv_fold_mismatches": 0
+  }
+}

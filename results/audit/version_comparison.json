@@ -1,0 +1,62 @@
+{
+  "selected_version": "A-v4",
+  "comparison": [
+    {
+      "relative_path": "data/hotel_bookings.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": true,
+      "v4_sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06"
+    },
+    {
+      "relative_path": "data/hotel_bookings_clean.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": true,
+      "v4_sha256": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb"
+    },
+    {
+      "relative_path": "data/data_dictionary.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": false,
+      "v4_sha256": "729295bfc8c2b29685379537aac24f8a5ba802178fa60efb820958505b6da061"
+    },
+    {
+      "relative_path": "data/handover_summary.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": false,
+      "v4_sha256": "3ea0e01601b1fe1212080dba82066499825566f0e527cca1b71b013342dcf097"
+    },
+    {
+      "relative_path": "results/models/preprocessor_template.joblib",
+      "v3_equals_v4": true,
+      "v2_equals_v4": false,
+      "v4_sha256": "817eb34fbf21f8f2f4ef4d8f96305b78424e7e71d2dd5b7521b46d5e26c92936"
+    },
+    {
+      "relative_path": "data/splits/random_split.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": true,
+      "v4_sha256": "d54cf270acfb841ba0272eb084c248e72540f6503c4a613abc756718de44ac4b"
+    },
+    {
+      "relative_path": "data/splits/train_ids.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": true,
+      "v4_sha256": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9"
+    },
+    {
+      "relative_path": "data/splits/test_ids.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": true,
+      "v4_sha256": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0"
+    },
+    {
+      "relative_path": "data/splits/chronological_split.csv",
+      "v3_equals_v4": true,
+      "v2_equals_v4": true,
+      "v4_sha256": "9dea636a201f22584d699feeb340e98b857f3504021376687792270559c68459"
+    }
+  ],
+  "fixed_cv_only_in_v4": true,
+  "C_evaluation_source_unchanged": true,
+  "old_archive_sha256": "2ecffc2374fa94aa9af88aab88d460c50f3d57e989016f3bc23d450993ea90d5"
+}

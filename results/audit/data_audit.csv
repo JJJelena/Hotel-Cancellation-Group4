@@ -1,0 +1,4 @@
+experiment,n_train,n_test,train_positive_rate,test_positive_rate,overlapping_test_rows,overlapping_test_fraction,unique_train_profiles,unique_test_profiles
+random,94851,23713,0.3725949120199049,0.37258044110825284,8998,0.37945430776367395,66389,19023
+chronological,96428,22136,0.36482142116397726,0.40644199494036864,0,0.0,63973,16865
+strict_chronological,96428,22136,0.36482142116397726,0.40644199494036864,0,0.0,63973,16865

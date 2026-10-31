@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "notebook_executed": true,
+  "code_cells_executed": 8,
+  "shap_recomputed": true,
+  "C_collection_schema_preserved": true,
+  "C_collector_actual_call": true,
+  "combined_metric_rows": 15,
+  "combined_prediction_rows": 703500
+}

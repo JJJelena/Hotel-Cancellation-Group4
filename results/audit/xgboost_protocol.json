@@ -1,0 +1,65 @@
+{
+  "candidate_grid": [
+    {
+      "max_depth": 3,
+      "n_estimators": 200,
+      "learning_rate": 0.05
+    },
+    {
+      "max_depth": 5,
+      "n_estimators": 300,
+      "learning_rate": 0.05
+    },
+    {
+      "max_depth": 7,
+      "n_estimators": 300,
+      "learning_rate": 0.05
+    }
+  ],
+  "selected_candidate": 3,
+  "selected_params": {
+    "max_depth": 7,
+    "n_estimators": 300,
+    "learning_rate": 0.05
+  },
+  "criterion": "mean five-fold training average precision; tie: first candidate",
+  "cv": "A-v4 fixed cv_folds.csv, five folds, seed 42",
+  "features": [
+    "lead_time",
+    "arrival_date_year",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "total_guests",
+    "total_nights",
+    "family_booking",
+    "hotel",
+    "arrival_date_month",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "reserved_room_type",
+    "agent",
+    "lead_time_group"
+  ],
+  "preprocessing": "A-v4 source template: median + StandardScaler; most_frequent + OneHotEncoder(min_frequency=50,handle_unknown=ignore)",
+  "probability_export": "full precision",
+  "runtime_seconds": 23.300206899642944,
+  "chronological_limitation": "Hyperparameters selected on random training rows overlap the later temporal test period. This is transfer evaluation, not strict temporal tuning.",
+  "oof_limitation": "Selected-model OOF probabilities reuse folds used for hyperparameter selection; OOF metrics are not nested-CV estimates.",
+  "software": {
+    "python": "3.11.2",
+    "sklearn": "1.9.1",
+    "xgboost": "3.2.0",
+    "pandas": "2.2.3",
+    "numpy": "2.2.3"
+  }
+}

@@ -1,0 +1,11 @@
+cluster,segment_name,split,n,n_canceled,cancellation_rate,cancellation_rate_pct
+0,Mainstream,test,11925,3414,0.2862893082,28.62893082
+0,Mainstream,train,48016,13640,0.284071976,28.4071976
+1,Higher ADR or larger party,test,3734,1351,0.361810391,36.1810391
+1,Higher ADR or larger party,train,14410,5171,0.3588480222,35.88480222
+2,Early planner,test,3910,2016,0.515601023,51.5601023
+2,Early planner,train,15837,8118,0.5125970828,51.25970828
+3,Long stay,test,2840,856,0.3014084507,30.14084507
+3,Long stay,train,11487,3735,0.3251501698,32.51501698
+4,Prior cancellation history,test,1304,1198,0.9187116564,91.87116564
+4,Prior cancellation history,train,5101,4677,0.9168790433,91.68790433

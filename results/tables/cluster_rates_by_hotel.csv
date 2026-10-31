@@ -1,0 +1,11 @@
+cluster,segment_name,hotel,n,n_canceled,cancellation_rate,cancellation_rate_pct
+0,Mainstream,City Hotel,42351,13511,0.3190243442,31.90243442
+0,Mainstream,Resort Hotel,17590,3543,0.2014212621,20.14212621
+1,Higher ADR or larger party,City Hotel,11102,4057,0.3654296523,36.54296523
+1,Higher ADR or larger party,Resort Hotel,7042,2465,0.3500426015,35.00426015
+2,Early planner,City Hotel,15408,8557,0.5553608515,55.53608515
+2,Early planner,Resort Hotel,4339,1577,0.363447799,36.3447799
+3,Long stay,City Hotel,4680,1948,0.4162393162,41.62393162
+3,Long stay,Resort Hotel,9647,2643,0.2739711828,27.39711828
+4,Prior cancellation history,City Hotel,5358,4993,0.9318775663,93.18775663
+4,Prior cancellation history,Resort Hotel,1047,882,0.8424068768,84.24068768

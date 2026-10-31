@@ -1,0 +1,17 @@
+Item,Value
+Project,Hotel Booking Cancellation Prediction
+Dataset rows,118564
+Dataset columns,32
+Training rows,94851
+Test rows,23713
+Model input features,24
+Processed feature count,221
+Target,is_canceled
+Identifier,row_id
+Excluded classification features,"adr, customer_type, deposit_type, total_of_special_requests, arrival_season, required_car_parking_spaces"
+Chronological date field,scheduled_arrival_date
+Chronological training rows,96428
+Chronological test rows,22136
+Chronological cutoff,scheduled arrival date; train through 2017-04-30; test from 2017-05-01
+Preprocessing,Fit on training data only
+Random test set,20% stratified holdout

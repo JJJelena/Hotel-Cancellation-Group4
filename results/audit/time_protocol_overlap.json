@@ -1,0 +1,6 @@
+{
+  "random_training_rows_in_chronological_test": 17707,
+  "chronological_test_rows": 22136,
+  "team_result_scope": "C protocol: same random-CV-selected settings, refit chronological train; not a fully independent future holdout",
+  "strict_result_scope": "independent parameter selection using five expanding windows of unique scheduled arrival dates within chronological TRAIN only"
+}

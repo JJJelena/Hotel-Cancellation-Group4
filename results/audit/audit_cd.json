@@ -1,0 +1,277 @@
+{
+  "source_comparison": [
+    {
+      "source": "C_eval",
+      "path": "src/evaluation.py",
+      "identical": true,
+      "source_sha": "33792183dc46254ca779dfa1bd6557e81c48acdb48cd5ce0ce76c83d8f809d3a",
+      "d_sha": "33792183dc46254ca779dfa1bd6557e81c48acdb48cd5ce0ce76c83d8f809d3a"
+    },
+    {
+      "source": "C_model",
+      "path": "notebooks/C_02_Logistic_Regression.ipynb",
+      "identical": true,
+      "source_sha": "bc201ed8f7faf949106f99ba5824950d9350652a041ad00c5f68e5d0b1181c5b",
+      "d_sha": "bc201ed8f7faf949106f99ba5824950d9350652a041ad00c5f68e5d0b1181c5b"
+    },
+    {
+      "source": "C_eval",
+      "path": "docs\\C_evaluation_spec.md",
+      "identical": true
+    },
+    {
+      "source": "C_eval",
+      "path": "notebooks\\C_01_Evaluation_Template.ipynb",
+      "identical": true
+    },
+    {
+      "source": "C_eval",
+      "path": "results\\metrics\\dummy_main_metrics.csv",
+      "identical": true
+    },
+    {
+      "source": "C_eval",
+      "path": "results\\models\\dummy_main.joblib",
+      "identical": true
+    },
+    {
+      "source": "C_eval",
+      "path": "results\\models\\dummy_main.json",
+      "identical": true
+    },
+    {
+      "source": "C_eval",
+      "path": "results\\predictions\\dummy_main_predictions.csv",
+      "identical": true
+    },
+    {
+      "source": "C_eval",
+      "path": "src\\evaluation.py",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "notebooks\\C_02_Logistic_Regression.ipynb",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\figures\\C_lr_top_coefficients.png",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\metrics\\logistic_regression_agent_ablation.csv",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\metrics\\logistic_regression_coefficients.csv",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\metrics\\logistic_regression_main_metrics.csv",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\metrics\\logistic_regression_no_agent_metrics.csv",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\models\\logistic_regression_main.joblib",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\models\\logistic_regression_main.json",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\models\\logistic_regression_no_agent.joblib",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\models\\logistic_regression_no_agent.json",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\predictions\\logistic_regression_main_predictions.csv",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\predictions\\logistic_regression_no_agent_predictions.csv",
+      "identical": true
+    },
+    {
+      "source": "C_model",
+      "path": "results\\tuning\\logistic_regression_cv_results.csv",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "docs\\D_handover_v4.txt",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\audit\\experiment_protocol.json",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\audit\\random_selected_parameters.json",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\metrics\\random_forest_main_metrics.csv",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\metrics\\random_forest_no_agent_metrics.csv",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\models\\random_forest_main.joblib",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\models\\random_forest_main.json",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\models\\random_forest_no_agent.joblib",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\models\\random_forest_no_agent.json",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\predictions\\random_forest_main_predictions.csv",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\predictions\\random_forest_no_agent_predictions.csv",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\tuning\\random_forest_cv_results.csv",
+      "identical": true
+    },
+    {
+      "source": "D_handover",
+      "path": "results\\tuning\\random_rf_cv_fold_metrics.csv",
+      "identical": true
+    }
+  ],
+  "standard_checks": [
+    {
+      "file": "dummy_main_predictions.csv",
+      "n": 140700,
+      "metrics_max_absolute_error": 1.3877787807814457e-16,
+      "exact_labels": true,
+      "exact_split_ids": true,
+      "folds_match": true
+    },
+    {
+      "file": "logistic_regression_main_predictions.csv",
+      "n": 140700,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "exact_labels": true,
+      "exact_split_ids": true,
+      "folds_match": true
+    },
+    {
+      "file": "logistic_regression_no_agent_predictions.csv",
+      "n": 140700,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "exact_labels": true,
+      "exact_split_ids": true,
+      "folds_match": true
+    },
+    {
+      "file": "random_forest_main_predictions.csv",
+      "n": 140700,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "exact_labels": true,
+      "exact_split_ids": true,
+      "folds_match": true
+    },
+    {
+      "file": "random_forest_no_agent_predictions.csv",
+      "n": 140700,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "exact_labels": true,
+      "exact_split_ids": true,
+      "folds_match": true
+    }
+  ],
+  "strict_check": {
+    "exact_labels": true,
+    "exact_ids": true,
+    "metrics": {
+      "threshold": 0.5,
+      "n": 22136,
+      "n_positive": 8997,
+      "accuracy": 0.7192356342609324,
+      "precision": 0.8099376114081996,
+      "recall": 0.40402356341002554,
+      "f1": 0.5391175380051909,
+      "roc_auc": 0.8277914525516505,
+      "pr_auc": 0.7637304461754417,
+      "brier": 0.17198444544515584,
+      "tn": 12286,
+      "fp": 853,
+      "fn": 5362,
+      "tp": 3635
+    }
+  },
+  "notebooks": {
+    "C_model": {
+      "cells": 18,
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "error_outputs": []
+    },
+    "D": {
+      "cells": 17,
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "error_outputs": []
+    }
+  }
+}

@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\caption{Aligned test results at threshold 0.50. AP means average precision. Shared later-arrival rows reuse randomly selected settings and are not an untouched future holdout. The separately selected forest has a different selection protocol.}
+\label{tab:models}
+\centering
+\begin{tabular}{llrrrrrr}
+\toprule
+Evaluation & Model & Precision & Recall & F1 & ROC-AUC & AP & Brier\\
+\midrule
+Random test & Dummy & 0.000 & 0.000 & 0.000 & 0.500 & 0.373 & 0.234\\
+ & Logistic regression & 0.746 & 0.651 & 0.695 & 0.867 & 0.801 & 0.142\\
+ & Random forest & 0.843 & 0.752 & 0.795 & 0.937 & 0.911 & 0.097\\
+ & XGBoost & 0.804 & 0.715 & 0.757 & 0.919 & 0.883 & 0.111\\
+\midrule
+Shared later-arrival & Dummy & 0.000 & 0.000 & 0.000 & 0.500 & 0.406 & 0.243\\
+ & Logistic regression & 0.634 & 0.740 & 0.683 & 0.802 & 0.706 & 0.181\\
+ & Random forest & 0.726 & 0.553 & 0.628 & 0.836 & 0.762 & 0.162\\
+ & XGBoost & 0.707 & 0.652 & 0.679 & 0.847 & 0.777 & 0.155\\
+\midrule
+Separate time selection & Random forest & 0.810 & 0.404 & 0.539 & 0.828 & 0.764 & 0.172\\
+\bottomrule
+\end{tabular}
+\end{table*}

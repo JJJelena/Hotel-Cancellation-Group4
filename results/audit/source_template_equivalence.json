@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "same_encoded_feature_names": true,
+  "processed_features": 221,
+  "checked_rows": 23713,
+  "max_transformed_value_difference": 0.0,
+  "selected_lr_params": {
+    "C": 1.0,
+    "class_weight": null
+  },
+  "selection": {
+    "rule": "smallest C within one standard error of highest mean CV AP",
+    "highest_cv_mean_ap": 0.7967121028513338,
+    "best_cv_standard_error": 0.001228696538818869,
+    "eligibility_minimum_ap": 0.7954834063125149,
+    "selected_cv_mean_ap": 0.7965646541218036,
+    "selected_parameters": {
+      "C": 1.0,
+      "class_weight": null
+    },
+    "n_folds": 5
+  },
+  "scope": "fit both unfitted templates on all random training rows; transform all random test rows",
+  "original_template_load_warnings": [
+    "Trying to unpickle estimator SimpleImputer from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator StandardScaler from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator Pipeline from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator OneHotEncoder from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator ColumnTransformer from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations"
+  ]
+}

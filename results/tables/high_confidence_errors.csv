@@ -1,0 +1,31 @@
+row_id,hotel,lead_time,country,market_segment,agent,probability,error_type,experiment
+21080,Resort Hotel,4,PRT,Corporate,139,0.0,false_negative,random
+4375,Resort Hotel,15,GBR,Groups,115,2.4e-05,false_negative,random
+70258,City Hotel,22,LUX,Offline TA/TO,28,2.9e-05,false_negative,random
+55884,City Hotel,43,RUS,Online TA,7,0.000411,false_negative,random
+40983,City Hotel,1,ITA,Online TA,9,0.001869,false_negative,random
+112490,City Hotel,20,PRT,Groups,87,0.991409,false_positive,random
+3399,Resort Hotel,45,PRT,Groups,38,0.991289,false_positive,random
+90009,City Hotel,56,PRT,Groups,Unknown,0.990419,false_positive,random
+107464,City Hotel,66,PRT,Groups,154,0.989362,false_positive,random
+94188,City Hotel,301,PRT,Offline TA/TO,6,0.980179,false_positive,random
+13320,Resort Hotel,184,GBR,Offline TA/TO,40,9e-06,false_negative,chronological
+70258,City Hotel,22,LUX,Offline TA/TO,28,1.5e-05,false_negative,chronological
+67708,City Hotel,117,GBR,Online TA,83,0.002784,false_negative,chronological
+67737,City Hotel,117,GBR,Online TA,83,0.002784,false_negative,chronological
+26149,Resort Hotel,1,PRT,Direct,Unknown,0.003125,false_negative,chronological
+112819,City Hotel,246,PRT,Offline TA/TO,12,0.973821,false_positive,chronological
+112817,City Hotel,246,PRT,Offline TA/TO,12,0.973821,false_positive,chronological
+112816,City Hotel,246,PRT,Offline TA/TO,12,0.973821,false_positive,chronological
+112813,City Hotel,246,PRT,Offline TA/TO,12,0.973821,false_positive,chronological
+112812,City Hotel,246,PRT,Offline TA/TO,12,0.973821,false_positive,chronological
+34707,Resort Hotel,0,AGO,Direct,Unknown,0.0439595913493704,false_negative,strict_chronological
+12158,Resort Hotel,0,GBR,Direct,250,0.050561163400259,false_negative,strict_chronological
+11863,Resort Hotel,1,ESP,Online TA,348,0.0526771129067469,false_negative,strict_chronological
+11873,Resort Hotel,1,ESP,Online TA,348,0.0526771129067469,false_negative,strict_chronological
+11867,Resort Hotel,1,ESP,Online TA,348,0.0526771129067469,false_negative,strict_chronological
+114287,City Hotel,448,PRT,Groups,229,0.9072251815188848,false_positive,strict_chronological
+114286,City Hotel,448,PRT,Groups,229,0.9072251815188848,false_positive,strict_chronological
+114733,City Hotel,322,PRT,Groups,37,0.8662317624847062,false_positive,strict_chronological
+112060,City Hotel,395,PRT,Offline TA/TO,229,0.859920475500011,false_positive,strict_chronological
+112057,City Hotel,395,PRT,Offline TA/TO,229,0.859920475500011,false_positive,strict_chronological

@@ -1,0 +1,14 @@
+{
+  "principal_model": "random_forest_main",
+  "criterion": "highest mean training-fold average precision among tested retained configurations",
+  "mean_fold_ap": {
+    "logistic_regression": 0.7965646541218036,
+    "random_forest": 0.907916,
+    "xgboost": 0.8821364590260874
+  },
+  "comparison_threshold": 0.5,
+  "separate_candidate_review_threshold": 0.45,
+  "probability_variant_retained": "raw; sigmoid evaluated as a separate prespecified assessment",
+  "test_used_for_algorithm_selection": false,
+  "scope": "retrospective random benchmark; no claim of universally best or prospectively validated model"
+}

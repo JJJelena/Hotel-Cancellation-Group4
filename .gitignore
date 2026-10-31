@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.ml_packages/
+ml_packages/
+runs/
+report/*.aux
+report/*.log
+report/*.out
+report/*.blg
+report/*.xdv
+report/*.synctex.gz

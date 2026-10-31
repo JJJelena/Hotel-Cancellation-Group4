@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "data_version": "A-v4",
+  "checks": [
+    {
+      "variant": "main",
+      "standard_schema": true,
+      "exact_ids": true,
+      "folds_match_A": true,
+      "metrics_recomputed": true,
+      "hotels_match": true,
+      "probability_rounding_max_error": 5.00000000069889e-07,
+      "model_input_features": 24,
+      "processed_features": 221
+    },
+    {
+      "variant": "no_agent",
+      "standard_schema": true,
+      "exact_ids": true,
+      "folds_match_A": true,
+      "metrics_recomputed": true,
+      "hotels_match": true,
+      "probability_rounding_max_error": 5.000000001809113e-07,
+      "model_input_features": 23,
+      "processed_features": 113
+    }
+  ],
+  "all_source_hashes_unchanged": true,
+  "shared_C_test_rows_match": true,
+  "strict_time_validation_precedes_test": true,
+  "parking_absent_from_all_fitted_models": true,
+  "shap_max_additivity_error": 4.4876910632041245e-08
+}

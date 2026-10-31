@@ -1,0 +1,5 @@
+dataset,condition,n,cancellations
+raw,equals_1,7383,0
+raw,greater_than_0,7416,0
+clean,equals_1,7360,0
+clean,greater_than_0,7393,0

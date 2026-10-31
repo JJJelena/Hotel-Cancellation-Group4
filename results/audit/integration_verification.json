@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "python": "3.11.2",
+  "sklearn": "1.9.1",
+  "n_clean_rows": 118564,
+  "standard_prediction_files": 6,
+  "checks": [
+    {
+      "file": "results\\predictions\\dummy_main_predictions.csv",
+      "status": "PASS",
+      "n": 140700,
+      "exact_split_ids": true,
+      "exact_labels": true,
+      "exact_cv_folds": true,
+      "metrics_max_absolute_error": 1.3877787807814457e-16,
+      "model_prediction_max_absolute_error": 8.798009509813909e-08,
+      "input_feature_count": 24,
+      "model_load_warnings": []
+    },
+    {
+      "file": "results\\predictions\\logistic_regression_main_predictions.csv",
+      "status": "PASS",
+      "n": 140700,
+      "exact_split_ids": true,
+      "exact_labels": true,
+      "exact_cv_folds": true,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "model_prediction_max_absolute_error": 4.999529297222693e-07,
+      "input_feature_count": 24,
+      "model_load_warnings": []
+    },
+    {
+      "file": "results\\predictions\\logistic_regression_no_agent_predictions.csv",
+      "status": "PASS",
+      "n": 140700,
+      "exact_split_ids": true,
+      "exact_labels": true,
+      "exact_cv_folds": true,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "model_prediction_max_absolute_error": 4.999684010895122e-07,
+      "input_feature_count": 23,
+      "model_load_warnings": []
+    },
+    {
+      "file": "results\\predictions\\random_forest_main_predictions.csv",
+      "status": "PASS",
+      "n": 140700,
+      "exact_split_ids": true,
+      "exact_labels": true,
+      "exact_cv_folds": true,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "model_prediction_max_absolute_error": 5.00000000069889e-07,
+      "input_feature_count": 24,
+      "model_load_warnings": [
+        "Trying to unpickle estimator SimpleImputer from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator StandardScaler from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator Pipeline from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator OneHotEncoder from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator ColumnTransformer from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator DecisionTreeClassifier from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator RandomForestClassifier from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations"
+      ]
+    },
+    {
+      "file": "results\\predictions\\random_forest_no_agent_predictions.csv",
+      "status": "PASS",
+      "n": 140700,
+      "exact_split_ids": true,
+      "exact_labels": true,
+      "exact_cv_folds": true,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "model_prediction_max_absolute_error": 5.00000000069889e-07,
+      "input_feature_count": 23,
+      "model_load_warnings": [
+        "Trying to unpickle estimator SimpleImputer from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator StandardScaler from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator Pipeline from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator OneHotEncoder from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator ColumnTransformer from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator DecisionTreeClassifier from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+        "Trying to unpickle estimator RandomForestClassifier from version 1.9.0 when using version 1.9.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations"
+      ]
+    },
+    {
+      "file": "results\\predictions\\xgboost_main_predictions.csv",
+      "status": "PASS",
+      "n": 140700,
+      "exact_split_ids": true,
+      "exact_labels": true,
+      "exact_cv_folds": true,
+      "metrics_max_absolute_error": 1.1102230246251565e-16,
+      "model_prediction_max_absolute_error": 2.220446049250313e-16,
+      "input_feature_count": 24,
+      "model_load_warnings": []
+    },
+    {
+      "file": "results\\supplementary\\strict_chronological_test_predictions.csv",
+      "status": "PASS",
+      "exact_split_ids": true,
+      "exact_labels": true,
+      "strict_time_folds": true,
+      "metrics": {
+        "threshold": 0.5,
+        "n": 22136,
+        "n_positive": 8997,
+        "accuracy": 0.7192356342609324,
+        "precision": 0.8099376114081996,
+        "recall": 0.40402356341002554,
+        "f1": 0.5391175380051909,
+        "roc_auc": 0.8277914525516505,
+        "pr_auc": 0.7637304461754417,
+        "brier": 0.17198444544515584,
+        "tn": 12286,
+        "fp": 853,
+        "fn": 5362,
+        "tp": 3635
+      }
+    }
+  ],
+  "failures": [],
+  "scope": "Saved prediction consistency and optional saved-model inference; no model retraining"
+}
