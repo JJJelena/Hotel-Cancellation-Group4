@@ -1,0 +1,11 @@
+cluster,segment_name,hotel,n,n_canceled,cancellation_rate_pct
+0,"Mainstream (short lead time, short stay)",City Hotel,42351,13511,31.9
+0,"Mainstream (short lead time, short stay)",Resort Hotel,17590,3543,20.14
+1,"Higher-ADR / larger-party bookings (higher ADR, more guests)",City Hotel,11102,4057,36.54
+1,"Higher-ADR / larger-party bookings (higher ADR, more guests)",Resort Hotel,7042,2465,35.0
+2,Early planner (very long lead time),City Hotel,15408,8557,55.54
+2,Early planner (very long lead time),Resort Hotel,4339,1577,36.34
+3,Long-stay (longest average nights),City Hotel,4680,1948,41.62
+3,Long-stay (longest average nights),Resort Hotel,9647,2643,27.4
+4,Prior-cancellation-history bookings (prior cancellations on record),City Hotel,5358,4993,93.19
+4,Prior-cancellation-history bookings (prior cancellations on record),Resort Hotel,1047,882,84.24
