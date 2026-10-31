@@ -1,6 +1,6 @@
 # Group 4 collaboration
 
-Continue using https://github.com/JJJelena/Hotel-Cancellation-Group5. Updates are new commits in the same repository; a new repository is unnecessary. The URL retains the legacy Group5 name, while the coursework identifies Group 4.
+Continue using https://github.com/JJJelena/Hotel-Cancellation-Group4. Updates are new commits in the same repository; a new repository is unnecessary.
 
 ## Invite teammates
 

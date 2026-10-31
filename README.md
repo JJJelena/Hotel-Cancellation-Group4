@@ -1,6 +1,6 @@
 # Hotel Booking Cancellation Prediction and Booking Segmentation
 
-Group 5 · K6312 Information Mining and Analysis
+Group 4 · K6312 Information Mining and Analysis
 
 HE CAI · LI YUECHAO · LIANG SIMAN · NIU JINGQI · YOU YIRAN
 
