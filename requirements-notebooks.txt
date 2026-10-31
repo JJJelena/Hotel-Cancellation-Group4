@@ -1,0 +1,6 @@
+# Optional interface and plotting dependencies for the supplied notebooks.
+# This adds notebook support to the base profile, without installing SHAP.
+# Add requirements-full.txt as well when running RF explanation code.
+-r requirements.txt
+seaborn==0.13.2
+jupyterlab==4.4.6

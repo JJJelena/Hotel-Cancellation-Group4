@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-31",
+  "purpose": "Separate intended current execution profiles from immutable historical provenance and later verification runtimes.",
+  "current_profiles": {
+    "base": {
+      "requirements_file": "requirements.txt",
+      "file_sha256": "2ed68246592d3b9e0c11c3707e4ccb6abc27bdd7948de311bfa5f65564ce5f09",
+      "minimum_python": ">=3.11",
+      "recommended_python": "3.12",
+      "purpose": "Saved-result verification, clustering and classifier training without SHAP.",
+      "direct_pins": {
+        "numpy": "2.2.3",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "matplotlib": "3.10.6",
+        "joblib": "1.6.0",
+        "xgboost": "3.2.0",
+        "nbformat": "5.10.4"
+      },
+      "scope": "Current installation profile, not a reconstruction of every historical artifact creator."
+    },
+    "full": {
+      "requirements_file": "requirements-full.txt",
+      "file_sha256": "0d7665a44482e99d2cfa365f65105d55136558bc5d0c327a87975ba63fb20ec4",
+      "minimum_python": ">=3.12",
+      "recommended_python": "3.12",
+      "purpose": "Complete command-line workflow including RF Tree SHAP.",
+      "direct_pins": {
+        "numpy": "2.2.3",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "matplotlib": "3.10.6",
+        "joblib": "1.6.0",
+        "xgboost": "3.2.0",
+        "nbformat": "5.10.4",
+        "shap": "0.54.1"
+      },
+      "scope": "Current installation profile, not a reconstruction of every historical artifact creator."
+    },
+    "notebooks": {
+      "requirements_file": "requirements-notebooks.txt",
+      "file_sha256": "69856529970d125c1aa6eed5deee7560c643ca6db30c3cbab056db32517350ef",
+      "minimum_python": ">=3.11",
+      "recommended_python": "3.12",
+      "purpose": "Base profile plus notebook UI and EDA plotting; install full separately for SHAP.",
+      "direct_pins": {
+        "numpy": "2.2.3",
+        "pandas": "2.2.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "matplotlib": "3.10.6",
+        "joblib": "1.6.0",
+        "xgboost": "3.2.0",
+        "nbformat": "5.10.4",
+        "seaborn": "0.13.2",
+        "jupyterlab": "4.4.6"
+      },
+      "scope": "Current installation profile, not a reconstruction of every historical artifact creator."
+    }
+  },
+  "release_python_constraints": {
+    "numpy": {
+      "version": "2.2.3",
+      "requires_python": ">=3.10",
+      "source": "https://pypi.org/project/numpy/2.2.3/",
+      "checked_date": "2026-10-31"
+    },
+    "pandas": {
+      "version": "2.2.3",
+      "requires_python": ">=3.9",
+      "source": "https://pypi.org/project/pandas/2.2.3/",
+      "checked_date": "2026-10-31"
+    },
+    "scikit-learn": {
+      "version": "1.9.1",
+      "requires_python": ">=3.11",
+      "source": "https://pypi.org/project/scikit-learn/1.9.1/",
+      "checked_date": "2026-10-31"
+    },
+    "scipy": {
+      "version": "1.17.1",
+      "requires_python": ">=3.11",
+      "source": "https://pypi.org/project/scipy/1.17.1/",
+      "checked_date": "2026-10-31"
+    },
+    "matplotlib": {
+      "version": "3.10.6",
+      "requires_python": ">=3.10",
+      "source": "https://pypi.org/project/matplotlib/3.10.6/",
+      "checked_date": "2026-10-31"
+    },
+    "joblib": {
+      "version": "1.6.0",
+      "requires_python": ">=3.10",
+      "source": "https://pypi.org/project/joblib/1.6.0/",
+      "checked_date": "2026-10-31"
+    },
+    "xgboost": {
+      "version": "3.2.0",
+      "requires_python": ">=3.10",
+      "source": "https://pypi.org/project/xgboost/3.2.0/",
+      "checked_date": "2026-10-31"
+    },
+    "nbformat": {
+      "version": "5.10.4",
+      "requires_python": ">=3.8",
+      "source": "https://pypi.org/project/nbformat/5.10.4/",
+      "checked_date": "2026-10-31"
+    },
+    "shap": {
+      "version": "0.54.1",
+      "requires_python": ">=3.12",
+      "source": "https://pypi.org/project/shap/0.54.1/",
+      "checked_date": "2026-10-31"
+    },
+    "seaborn": {
+      "version": "0.13.2",
+      "requires_python": ">=3.8",
+      "source": "https://pypi.org/project/seaborn/0.13.2/",
+      "checked_date": "2026-10-31"
+    },
+    "jupyterlab": {
+      "version": "4.4.6",
+      "requires_python": ">=3.9",
+      "source": "https://pypi.org/project/jupyterlab/4.4.6/",
+      "checked_date": "2026-10-31"
+    }
+  },
+  "historical_and_prior_verification_records": [
+    {
+      "path": "results/audit/software_versions.json",
+      "sha256": "f9acdd3bdb5b1f40a0645426597bef2aacbe932435f7bb01d1fb63cfa8a51ab2",
+      "role": "Historical D RF/SHAP run environment.",
+      "recorded_environment": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.6",
+          "pandas": "3.0.3",
+          "scikit-learn": "1.9.0",
+          "shap": "0.54.1",
+          "matplotlib": "3.11.0",
+          "scipy": "1.18.1",
+          "joblib": "1.5.3",
+          "nbformat": "5.10.4"
+        }
+      },
+      "preservation": "Original supplied metadata; not rewritten to match current execution profiles."
+    },
+    {
+      "path": "results/models/logistic_regression_main.json",
+      "sha256": "9c1b98fbf3364df62784cadda96826407e26be01255398c26aa1b31b84ccdb56",
+      "role": "Retained logistic main model creating metadata.",
+      "recorded_environment": {
+        "python": "3.13.17",
+        "sklearn": "1.9.1",
+        "pandas": "3.0.5",
+        "xgboost": null
+      },
+      "preservation": "Original supplied metadata; not rewritten to match current execution profiles."
+    },
+    {
+      "path": "results/audit/xgboost_protocol.json",
+      "sha256": "b7a53d1f609aecf246c31c553138ee348fe0e9b533bf496215ee0d616080236d",
+      "role": "Completed E experiment software recorded alongside its protocol.",
+      "recorded_environment": {
+        "python": "3.11.2",
+        "sklearn": "1.9.1",
+        "xgboost": "3.2.0",
+        "pandas": "2.2.3",
+        "numpy": "2.2.3"
+      },
+      "preservation": "Original supplied metadata; not rewritten to match current execution profiles."
+    },
+    {
+      "path": "results/audit/integration_verification.json",
+      "sha256": "21bd08866df34b3f0409180ad066f04a4bf3ba06d833c45b5bb72c577ab38225",
+      "role": "Later saved-result/model verification runtime; not a creating environment.",
+      "recorded_environment": {
+        "python": "3.11.2",
+        "sklearn": "1.9.1"
+      },
+      "preservation": "Original supplied metadata; not rewritten to match current execution profiles."
+    },
+    {
+      "path": "results/audit/saved_model_checks.json",
+      "sha256": "110a3d666cb6039f68cecac475e03f65dc7b4f135ff21b0d8ed069da0013e66f",
+      "role": "Later saved-model checker runtime; runtime is scikit-learn version only.",
+      "recorded_environment": {
+        "runtime": "1.9.1"
+      },
+      "preservation": "Original supplied metadata; not rewritten to match current execution profiles."
+    }
+  ],
+  "native_runtime_requirements": {
+    "macOS": "The pinned XGBoost wheel requires a compatible OpenMP runtime: brew install libomp. Match Python and Homebrew architecture.",
+    "Windows": "The XGBoost wheel requires its Microsoft Visual C++ runtime; inspect the official installation guide if a DLL fails to load.",
+    "source": "https://xgboost.readthedocs.io/en/release_3.2.0/install.html",
+    "verification_scope": "Windows integration checks do not certify macOS execution."
+  },
+  "reproducibility_scope": [
+    "Direct pins are not a complete platform-independent lock of Python, transitive dependencies, native libraries or CPU execution.",
+    "A current compatible environment can validate retained prediction tables and models without recreating every historical training environment.",
+    "Retraining follows the common analytical protocol; exact prediction or byte identity across platform/version changes is not asserted.",
+    "Preserve reference results and write reruns to new directories. Record current validation separately rather than editing original provenance.",
+    "Loading scikit-learn artifacts across versions is not supported as an exact persistence guarantee; inspect load warnings and verify predictions."
+  ],
+  "model_persistence_source": "https://scikit-learn.org/stable/model_persistence.html"
+}

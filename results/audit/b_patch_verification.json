@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "source_patch": "B_Clustering_双重舍入修复补丁.zip",
+  "source_changed_cells_zero_based": [
+    19,
+    26,
+    28
+  ],
+  "notebook_code_cells": 14,
+  "all_code_syntax_pass": true,
+  "stored_error_outputs": [],
+  "all_code_cells_have_execution_counts": true,
+  "selected_k5_rerun_cells": [
+    1,
+    3,
+    5,
+    17,
+    19,
+    20,
+    25
+  ],
+  "full_silhouette_seed_grid_rerun": false,
+  "patched_csv_matches_selected_k5_rerun": true,
+  "patched_rates_match_integrated_full_precision_table": true,
+  "cancellation_rate_pct": [
+    28.45,
+    35.95,
+    51.32,
+    32.04,
+    91.73
+  ],
+  "cluster_n": [
+    59941,
+    18144,
+    19747,
+    14327,
+    6405
+  ],
+  "training_only_caps_scaling_kmeans_verified": true,
+  "target_not_used_for_clustering": true,
+  "model_report_numbers_changed": false,
+  "b01_changed": false,
+  "root_readme_replaced": false,
+  "extra_comment_correction": "Corrected illustrative rounding sequence in notebook comment; computation unchanged",
+  "files": [
+    {
+      "path": "notebooks/B_02_Clustering.ipynb",
+      "previous_sha256": "e560279f2d45752d43885767910a8b2388ccf944a58a36e209b2e117a9a800b4",
+      "patch_sha256": "620520cb679ff81903a0a7397775213b15efeb13a9943b82a3d0521919e17ef9",
+      "applied_sha256": "c474065ad2909455a49711db2162160c3552b0b1a68f73873b9343a6d119cd6c"
+    },
+    {
+      "path": "results/tables/07_cluster_profile.csv",
+      "previous_sha256": null,
+      "patch_sha256": "479e1df5a55a47bb6fad05fcfa1d5f1bcc4c438359acbdd65fa87665570ab44a",
+      "applied_sha256": "479e1df5a55a47bb6fad05fcfa1d5f1bcc4c438359acbdd65fa87665570ab44a"
+    },
+    {
+      "path": "results/figures/08_cluster_cancellation_rate.png",
+      "previous_sha256": null,
+      "patch_sha256": "b592089a7634021eb8ac99e768cc65f259a4f1ed4a2e05bdb82669c6d8b1a83e",
+      "applied_sha256": "b592089a7634021eb8ac99e768cc65f259a4f1ed4a2e05bdb82669c6d8b1a83e"
+    },
+    {
+      "path": "results/figures/11_cluster_cancellation_by_hotel.png",
+      "previous_sha256": null,
+      "patch_sha256": "a809416b9a47cf3981f78f0c0cbbab06c27dff658417d1a955df08382d03911e",
+      "applied_sha256": "a809416b9a47cf3981f78f0c0cbbab06c27dff658417d1a955df08382d03911e"
+    }
+  ],
+  "patched_figures_visually_reviewed": true,
+  "patch_scope": "Exactly four B files: notebook, profile CSV and two figures",
+  "extra_b_readme_included": false,
+  "current_snapshot_sha256": {
+    "notebooks/B_02_Clustering.ipynb": "5f1684da91e3e761bf2db7314d39d9f4bff4a7912d377927fe49ffc11894fab2",
+    "results/tables/07_cluster_profile.csv": "479e1df5a55a47bb6fad05fcfa1d5f1bcc4c438359acbdd65fa87665570ab44a",
+    "results/figures/08_cluster_cancellation_rate.png": "b592089a7634021eb8ac99e768cc65f259a4f1ed4a2e05bdb82669c6d8b1a83e",
+    "results/figures/11_cluster_cancellation_by_hotel.png": "a809416b9a47cf3981f78f0c0cbbab06c27dff658417d1a955df08382d03911e"
+  },
+  "identity_correction": "Group 4; notebook heading corrected after the B patch. The four B analytical outputs retain their revised values."
+}

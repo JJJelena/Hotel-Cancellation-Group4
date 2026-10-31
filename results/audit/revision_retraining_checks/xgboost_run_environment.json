@@ -1,0 +1,126 @@
+{
+  "schema_version": "training-environment-v1",
+  "recorded_at_utc": "2026-10-31T06:23:38.830751+00:00",
+  "metadata_scope": "observed environment at run start, not the creating environment of saved reference artifacts",
+  "stage": "xgboost",
+  "seed": 42,
+  "python": {
+    "version": "3.11.2",
+    "implementation": "CPython",
+    "compiler": "MSC v.1934 64 bit (AMD64)",
+    "pointer_bits": 64
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpu_count": 16
+  },
+  "packages": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0",
+    "xgboost": "3.2.0",
+    "shap": null,
+    "matplotlib": "3.10.6",
+    "nbformat": "5.10.4",
+    "threadpoolctl": "3.6.0"
+  },
+  "explicit_thread_settings": {
+    "xgboost_n_jobs": 6
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OMP_DYNAMIC": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null
+  },
+  "loaded_numeric_libraries": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "prefix": "libscipy_openblas",
+      "version": "0.3.28",
+      "num_threads": 16,
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "prefix": "vcomp",
+      "version": null,
+      "num_threads": 16,
+      "threading_layer": null,
+      "architecture": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "prefix": "libscipy_openblas",
+      "version": "0.3.30",
+      "num_threads": 16,
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "algorithm_settings": {
+    "candidate_grid": [
+      {
+        "max_depth": 3,
+        "n_estimators": 200,
+        "learning_rate": 0.05
+      },
+      {
+        "max_depth": 5,
+        "n_estimators": 300,
+        "learning_rate": 0.05
+      },
+      {
+        "max_depth": 7,
+        "n_estimators": 300,
+        "learning_rate": 0.05
+      }
+    ],
+    "tree_method": "hist",
+    "objective": "binary:logistic",
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "min_child_weight": 1,
+    "reg_lambda": 1,
+    "device": "cpu (default)"
+  },
+  "input_and_source_sha256": {
+    "data/hotel_bookings_clean.csv": "9eff948b1cc015144de64ca009c860539f08c0d5493e5470af449a1ff5068fbb",
+    "data/data_dictionary.csv": "729295bfc8c2b29685379537aac24f8a5ba802178fa60efb820958505b6da061",
+    "data/splits/chronological_split.csv": "9dea636a201f22584d699feeb340e98b857f3504021376687792270559c68459",
+    "data/splits/cv_folds.csv": "12f7f4e423038834658aa53b55467b069a0570080a76a278a5747144c6fe6917",
+    "data/splits/random_split.csv": "d54cf270acfb841ba0272eb084c248e72540f6503c4a613abc756718de44ac4b",
+    "data/splits/test_ids.csv": "91af44d02cfde4b20c696227eab11fe1b78dd4fcde2cc1ef631f5fc7e66de5b0",
+    "data/splits/train_ids.csv": "f3b735634c6e4a2d698e94b37a2df6d2a79abb317a8072b8bc742a91b097b0f9",
+    "src/common.py": "b62dc52ad6d44669dff8ec6aac0850e56d586d288ea45bc12948372e9ce31c19",
+    "src/compare_reproduction.py": "8d98a006dcc2b34241ced7f57fafa97c7121bafc05216c1de60382206369afad",
+    "src/evaluation.py": "f509ee17f3c05b76d24d7aca156128448ad0719f2726291bc1553eec044a9fee",
+    "src/explain_rf.py": "fffb38122c8b4f852c288ef643a2447ee36fad393f174abb50841915c1dd5526",
+    "src/plot_forest_shap.py": "8b90ed61dc90561cc6b0575159eb6e3e3afde219b9fa7702cc39e1e93b8e4664",
+    "src/preprocessing_source.py": "4ba92ed8085c2f6252529b6ca47c32a34d2be57eb4e77692b8443d9587dfeefd",
+    "src/reproduce_ab.py": "171d0bbc2e2b471a36bc69d022bd7b8033477265c7a5eb572acacd4007edfdeb",
+    "src/reproduction_metadata.py": "88bae5cac54cb9d6ae06ed36a592350f9bc14a871350ba75e0b0cad39f3de00b",
+    "src/run_project.py": "784f1993de1bafbf5d5c7801b91ea490e14e3b29a41c3c17b4225b20fe0245e8",
+    "src/set_repository.py": "1f6f2154efc26817247f4fb94f21e0cef8901b69da93cbe757e49b538c48c8b1",
+    "src/shap_compat.py": "0bc1825cdaa284777e9b496698fe783d6575c19717a75079f8c73283070f8118",
+    "src/threshold_calibration.py": "5003f577458a4a6bca89a7a6d666dbbf9378e1fa0705d252d30836ea45a66670",
+    "src/train_logistic.py": "f2df024db572ee8ba20d001a2bc849fee0be81bdb20394a2ce284f6cfa12f0ea",
+    "src/train_rf.py": "6cdf95031d1196455ddf6c7babc3b031c28b64071bbd82eae68987a6dcc8f444",
+    "src/train_xgboost.py": "5444def4c40ce396c70cd8120378a7875e2b5de428cf271c55c30dac0182fec3",
+    "src/verification.py": "3603d126f305e90d5e0277f33c46528c7ddd8952bfd9ad78b225f5b758fc4353",
+    "src/verify_e.py": "9e8938f37a08adb38a2aac312016ac079baf354ea173c34cc008d82ec34db42d",
+    "requirements.txt": "77235813faa3887dbe8bce8f9a9f19c29ea6839b18b3bb1d8f28e316882c92fd"
+  },
+  "reproducibility_scope": "fixed input files, folds, seed and documented algorithm settings; cross-version or cross-platform bitwise equality is not claimed"
+}

@@ -1,0 +1,4 @@
+# Complete command-line workflow including RF Tree SHAP.
+# Requires CPython >=3.12; Python 3.12 is the recommended interpreter.
+-r requirements.txt
+shap==0.54.1

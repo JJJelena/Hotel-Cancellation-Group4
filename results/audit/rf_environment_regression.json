@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "python": "3.11.2",
+  "preparation": {
+    "status": "PASS",
+    "rows": 118564,
+    "shap_installed": false,
+    "optional_shap_recorded_as": null,
+    "rf_metadata_written": true,
+    "forest_fitted": false,
+    "original_algorithm_settings_unchanged": true
+  },
+  "full_stage_preflights": {
+    "all": {
+      "status": "PASS",
+      "actual_exit_code": 1,
+      "python_311_rejected": true,
+      "missing_shap_reported": true,
+      "run_directory_created": false
+    },
+    "explain": {
+      "status": "PASS",
+      "actual_exit_code": 1,
+      "python_311_rejected": true,
+      "missing_shap_reported": true,
+      "run_directory_created": false
+    }
+  },
+  "historical_reference_files_unchanged": true
+}
