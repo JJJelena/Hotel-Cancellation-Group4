@@ -1,0 +1,6 @@
+cluster,segment_name,n,pct_of_total,lead_time_mean,total_nights_mean,total_guests_mean,adr_mean,previous_cancellations_mean,cancellation_rate_pct
+0,"Mainstream (short lead time, short stay)",59941,50.6,45.7,2.5,1.7,89.0,0.0,28.45
+1,"Higher-ADR / larger-party bookings (higher ADR, more guests)",18144,15.3,76.1,3.6,2.9,175.8,0.0,35.95
+2,Early planner (very long lead time),19747,16.7,262.8,3.1,1.9,92.2,0.0,51.32
+3,Long-stay (longest average nights),14327,12.1,126.9,8.2,2.0,92.5,0.0,32.04
+4,Prior-cancellation-history bookings (prior cancellations on record),6405,5.4,197.0,2.6,1.8,76.0,1.6,91.73
