@@ -77,7 +77,7 @@ def environment_evidence(root):
     evidence = {}
     directory = root/'results/audit'
     names = ['software_versions.json', 'integration_verification.json', 'xgboost_protocol.json',
-        'xgboost_run_environment.json', 'rf_run_environment.json', 'run_environment.json',
+        'xgboost_run_environment.json', 'rf_run_environment.json', 'logistic_run_environment.json', 'run_environment.json',
         'random_selected_parameters.json', 'strict_chronological_selected_parameters.json']
     for name in names:
         path = directory/name

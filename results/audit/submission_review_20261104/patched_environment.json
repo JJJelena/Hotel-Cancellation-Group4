@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "profile": "full",
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "platform": "Windows",
+  "machine": "AMD64",
+  "requirements_file": "requirements-full.txt",
+  "imports_checked": true,
+  "packages": {
+    "numpy": {
+      "required": "2.2.3",
+      "installed": "2.2.3",
+      "requires_python": ">=3.10",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "pandas": {
+      "required": "2.2.3",
+      "installed": "2.2.3",
+      "requires_python": ">=3.9",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "scikit-learn": {
+      "required": "1.9.1",
+      "installed": "1.9.1",
+      "requires_python": ">=3.11",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "scipy": {
+      "required": "1.17.1",
+      "installed": "1.17.1",
+      "requires_python": ">=3.11",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "matplotlib": {
+      "required": "3.10.6",
+      "installed": "3.10.6",
+      "requires_python": ">=3.10",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "joblib": {
+      "required": "1.6.0",
+      "installed": "1.6.0",
+      "requires_python": ">=3.10",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "xgboost": {
+      "required": "3.2.0",
+      "installed": "3.2.0",
+      "requires_python": ">=3.10",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "nbformat": {
+      "required": "5.10.4",
+      "installed": "5.10.4",
+      "requires_python": ">=3.8",
+      "version_matches": true,
+      "import_ok": true
+    },
+    "shap": {
+      "required": "0.54.1",
+      "installed": "0.54.1",
+      "requires_python": ">=3.12",
+      "version_matches": true,
+      "import_ok": true
+    }
+  },
+  "errors": [],
+  "notices": [
+    "Matching these direct pins does not guarantee bit-identical retraining across Python, operating system, CPU, BLAS/OpenMP or transitive-library builds. Verify the saved artifacts separately."
+  ]
+}

@@ -127,7 +127,7 @@ def run(experiment='random',model_path=None):
         family_rows.append({'family':name,'members':','.join(fs),'mean_abs_summed_shap':np.abs(v).mean()})
     pd.DataFrame(family_rows).to_csv(OUT/f'tables/{experiment}_shap_feature_families.csv',index=False)
     write_json(OUT/f'shap/{experiment}_explanation_summary.json',dict(model_path=os.path.relpath(path, ROOT),
-        model_sha256=sha(path),model_name='RandomForest',selected_tree_status='RF candidate only; final team selection not supplied',
+        model_sha256=sha(path),model_name='RandomForest',selected_tree_status='Random-forest probability explanation under the shared feature and evaluation contract',
         output='uncalibrated cancellation probability',positive_class=1,background_n=100,sample_n=len(sample),
         feature_perturbation='interventional',approximate=False,base_probability=base,
         numeric_alignment=numeric_meta,
@@ -141,4 +141,6 @@ if __name__=='__main__':
     import argparse
     p=argparse.ArgumentParser();p.add_argument('--experiment',default='random',choices=['random','chronological','strict_chronological'])
     p.add_argument('--model-path',default=None)
+    if OUT.parent.resolve()==ROOT.resolve():
+        p.error('Use python src/run_project.py --stage explain --output-root runs/reproduction to preserve reference results.')
     a=p.parse_args();run(a.experiment,a.model_path)

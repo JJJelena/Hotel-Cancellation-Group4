@@ -4,63 +4,76 @@ Group 4 · KM6312 Information Mining and Analysis
 
 HE CAI · LI YUECHAO · LIANG SIMAN · NIU JINGQI · YOU YIRAN
 
-This project integrates data preparation, exploratory analysis, training-only K-means segmentation, Dummy / logistic regression / random forest / XGBoost comparison, forest SHAP explanations, and OOF-based threshold and probability assessment.
+Repository: https://github.com/JJJelena/Hotel-Cancellation-Group4
 
-## Results and scope
+The project connects data preparation, exploratory analysis, training-fitted booking segmentation, cancellation classification, random-forest explanations, and training-derived probability assessment under one data and evaluation contract.
 
-The cleaned data contain 118,564 bookings and 24 supervised inputs. Random-test AP is 0.373 (Dummy), 0.801 (logistic), 0.911 (forest), and 0.883 (XGBoost), with a common decision threshold of 0.50. The forest is the principal benchmark selected by training-fold AP among the tested configurations. Its F1 is 0.795 at 0.50 and 0.803 at the training-selected threshold 0.45.
+## Main results
 
-Random-test performance is limited by repeated profiles. The unseen-profile forest F1 is 0.580. The shared later-arrival refit reuses randomly selected settings and must not be called untouched future validation. A separate forest selected only on early-period expanding windows has later-arrival F1 0.539 and AP 0.764. Field availability at initial booking remains unverified. Segmentation and SHAP are descriptive, not causal.
+The cleaned data contain 118,564 bookings, including 44,176 cancellations. All classifiers use the same 24 inputs, fixed row-ID split and five training folds. At threshold 0.50, random-test average precision is 0.373 for Dummy, 0.801 for logistic regression, 0.911 for random forest and 0.883 for XGBoost. The selected forest has F1 0.795; its training-selected threshold of 0.45 gives test F1 0.803 as a separate assessment.
 
-## Files
+The random benchmark includes repeated input profiles. Forest F1 is 0.580 on unseen random-test profiles and 0.539 in the separately selected chronological experiment. The shared later-arrival refit reuses settings selected on random training and is reported separately from independent temporal selection. These results support a retrospective benchmark, with field availability, future transfer and intervention benefits still requiring operational validation. Segmentation and SHAP describe associations, not causal effects.
 
-- `data/`: original and cleaned data, data dictionary, fixed split IDs and five training folds.
-- `src/`: shared metric API, source-built 24-input preprocessing, training and verification commands.
-- `notebooks/00_Integrated_Project.ipynb`: common reading and verification entry point.
-- `notebooks/A_*.ipynb`, `B_*.ipynb`, `C_*.ipynb`, `D_*.ipynb`, `E_*.ipynb`: stage-specific analytical records.
-- `results/metrics`, `predictions`, `tuning`, `tables`, `figures`, `shap`, `models`, `audit`: retained reference evidence and completed integration outputs.
-- `report/`: official ICML 2026 style files, complete paper source, figures, references and compiled report.
+## Project files
 
-## Environment and verification
+- `data/`: source and cleaned CSVs, dictionary, fixed split IDs and training folds.
+- `src/`: preprocessing, metrics, training, probability assessment and verification.
+- `notebooks/00_Integrated_Project.ipynb`: common analytical entry point; `A_*.ipynb` through `E_*.ipynb` retain stage-specific analysis.
+- `results/`: the report's reference predictions, models, metrics, tuning records, tables, figures, SHAP and audit records.
+- `report/main.pdf`: compiled final report. The accompanying `.tex`, bibliography, figures and official ICML style files form the complete editable source.
+- `environments/`: current installation profiles and historical software provenance.
+- `docs/Reproducibility.md`: verification and fitting scope; `docs/COLLABORATION.md`: team workflow.
 
-Use Python 3.11+ in a virtual environment and install `python -m pip install -r requirements.txt`. The integration checks and E fitting were run with Python 3.11.2 / scikit-learn 1.9.1. Historical D forests and A template were created with scikit-learn 1.9.0; C metadata records 1.9.1. The original environment records are retained. A single requirements file does not retroactively make the historical creating environments identical. Original pickle artifacts were loaded and predictions matched in the recorded validation environment; CSV evidence remains portable across environments.
+## Install
 
-From this directory:
+Use **Python 3.12** for the complete workflow, including SHAP 0.54.1. In a clean virtual environment, from this directory:
 
 ```bash
-python src/run_project.py --stage verify
+python -m venv .venv
+# Windows PowerShell: .venv/Scripts/Activate.ps1
+# macOS/Linux: source .venv/bin/activate
+python -m pip install -r requirements-full.txt
+python src/check_environment.py --full
+python -m pip check
+```
+
+The base `requirements.txt` profile supports Python 3.11 and 3.12 for classifier fitting and saved-result checks without SHAP. Add `requirements-notebooks.txt` for JupyterLab and Seaborn. SHAP 0.54.1 requires Python >=3.12; it is not installed by the base or optional notebook profile. Install both optional files under Python 3.12 for the complete notebook environment.
+
+On macOS, install OpenMP using `brew install libomp` before importing XGBoost and keep Python/Homebrew architectures consistent. See [environment details](environments/README.md). The measured execution environment is Windows; macOS execution is not certified by that check.
+
+## Check the submitted evidence
+
+```bash
 python src/run_project.py --stage verify --check-models
 python src/verify_e.py --project-root .
 ```
 
-Verification checks row IDs, labels, folds, metrics, saved model predictions, strict-time boundaries and explanation reconstruction. It does not rerun all historical hyperparameter searches. Complete model artifacts are needed for `--check-models`.
+These commands align rows, labels and folds, recompute metrics, check saved-model predictions, and validate the threshold/calibration outputs. Reports are written under `runs/verification/`, preserving historical audit records. The checkers also accept an explicit `--output`. Matching saved evidence does not mean all parameter searches have been rerun.
 
-## Reproduce separately
-
-The unified entry point writes retraining into a separate run directory to preserve reference evidence. Training may take substantial time.
+## Run the analysis from source
 
 ```bash
-python src/run_project.py --stage ab --output-root runs/reproduction
-python src/run_project.py --stage dummy --output-root runs/reproduction
-python src/run_project.py --stage logistic --output-root runs/reproduction
-python src/run_project.py --stage forest --output-root runs/reproduction
-python src/run_project.py --stage explain --output-root runs/reproduction
-python src/run_project.py --stage xgboost --output-root runs/reproduction
-python src/run_project.py --stage probability --output-root runs/reproduction
+python src/run_project.py --stage all --output-root runs/reproduction
+python src/compare_reproduction.py --reference-root . --run-root runs/reproduction
+python src/verify_e.py --project-root . --e-root runs/reproduction --prediction-root runs/reproduction --output runs/reproduction/results/audit/probability_verification.json
 ```
 
-`--stage all` runs these stages in sequence. The probability stage expects LR, RF and XGBoost predictions in the same output run. To repeat only probability assessment from submitted predictions, use `python src/threshold_calibration.py --project-root . --output-root runs/probability_check`.
+The full workflow runs A/B analysis, Dummy, logistic regression selection, random-forest random and independent temporal selection, 400-row forest SHAP, XGBoost selection, and OOF threshold/calibration assessment. Stages can also run individually with `--stage ab`, `dummy`, `logistic`, `forest`, `explain`, `xgboost`, or `probability`. The probability stage needs LR, RF and XGBoost predictions in the same run directory. The `all` and `explain` stages check the full environment before fitting.
 
-The source preprocessing template exactly matched the original 221-feature transformation in the integration check. All classifier preprocessing is fitted inside training folds. The submitted 24-feature contract excludes parking, ADR, deposit type, customer type, special requests and season. Re-running historical A/B/C notebooks can regenerate their local analysis outputs; keep an archival copy and use the unified CLI for isolated full-model reproduction. Notebook working directories are the project root or `notebooks/`.
+To recompute probability assessment from the submitted reference predictions alone:
 
-## Report and submission metadata
+```bash
+python src/threshold_calibration.py --project-root . --output-root runs/probability_check
+```
 
-Compile `report/main.tex` with pdfLaTeX / BibTeX (or upload the complete report source to Overleaf). Official ICML style files are unmodified. The course notice identifies this as a course project, not an ICML conference acceptance. The report uses 10pt Times-family text and Letter paper.
+Keep new outputs under a separate run directory. The comparison aligns reference and fitted probabilities by row ID, reports metric deltas and changed decisions, and treats independent temporal results separately. Historical model-creating and later checking environments are retained independently. Fixed seeds and package pins do not guarantee identical tree fitting across operating systems, numeric libraries or package builds. Source-built preprocessing avoids depending on the old fitted-template pickle for new fitting.
 
-Set the real repository URL using `python src/set_repository.py --url https://github.com/OWNER/REPOSITORY`, then recompile and verify the PDF. The URL is not fabricated. Zoom recording information belongs in the course submission form rather than a public repository.
+## Report
+
+The report uses the official ICML 2026 template, 10pt Times-family text on Letter paper, with the course affiliation and actual GitHub URL. Compile `report/main.tex` with pdfLaTeX/BibTeX or upload the complete report source to Overleaf. The ICML style files are unchanged; the PDF identifies this as a KM6312 course project.
 
 ## Data attribution
 
 António, N., de Almeida, A., and Nunes, L. (2019). Hotel booking demand datasets. Data in Brief 22, 41–49. https://doi.org/10.1016/j.dib.2018.11.126
 
-The project-specific row ID is not a true booking identifier. Dataset and third-party style files retain their respective rights and citations. See the paper bibliography for algorithm and method references.
+The project-specific row ID is an alignment key, not a true booking identifier. Dataset and third-party style files retain their respective rights and citations. Method references appear in the report bibliography.

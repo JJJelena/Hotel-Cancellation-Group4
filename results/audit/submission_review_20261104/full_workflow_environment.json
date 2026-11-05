@@ -1,0 +1,83 @@
+{
+  "schema_version": "training-environment-v1",
+  "recorded_at_utc": "2026-11-04T08:07:20.335930+00:00",
+  "metadata_scope": "observed environment at run start, not the creating environment of saved reference artifacts",
+  "stage": "observed_during_original_repository_full_workflow",
+  "seed": 42,
+  "python": {
+    "version": "3.12.14",
+    "implementation": "CPython",
+    "compiler": "MSC v.1944 64 bit (AMD64)",
+    "pointer_bits": 64
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "logical_cpu_count": 16
+  },
+  "packages": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0",
+    "xgboost": "3.2.0",
+    "shap": "0.54.1",
+    "matplotlib": "3.10.6",
+    "nbformat": "5.10.4",
+    "threadpoolctl": "3.7.0"
+  },
+  "explicit_thread_settings": {
+    "random_forest_n_jobs": 10,
+    "xgboost_n_jobs": 6,
+    "logistic_grid_n_jobs": 1
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OMP_DYNAMIC": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null
+  },
+  "loaded_numeric_libraries": [],
+  "algorithm_settings": {
+    "command": "python src/run_project.py --stage all --output-root ../run_original_all",
+    "source_commit": "54273e5e0f264bf32410b61c5704991506e904e9",
+    "capture_scope": "Observed during execution; source/input/environment capture, not a retroactive pre-fit timestamp."
+  },
+  "input_and_source_sha256": {
+    "data/hotel_bookings_clean.csv": "1ab8334edae7a6e270ef27ff4dcd83fd11f418dfc18455918595fb3a4a4c37ef",
+    "data/data_dictionary.csv": "133eebbeaaab2e4e2c5e381fca428a9a3ac6aa24c8fb53ec7a703e93a071b147",
+    "data/splits/chronological_split.csv": "2ef508cb5c522364f3ee89d8aead90f90528fb9ce9675b6cff559a613a822aa5",
+    "data/splits/cv_folds.csv": "34485817dc99cc4277d707dd331c06f92210af3c76513b980ff780a505ae1c52",
+    "data/splits/random_split.csv": "675ad3b2287b856a739a4e02f523c2e7c89bf22548e02b39df54774b30391f11",
+    "data/splits/test_ids.csv": "f7ac408656e8106712490ab6f18e1e7907e341e95b6fdeadeacb19cf99359a4d",
+    "data/splits/train_ids.csv": "8243446f53cfae244132bf06a7fcb265408f9ef0bebcdc9f153ab544e3bc2834",
+    "src/check_environment.py": "e5fed32a30178c43a14eb0d8403739c4aaf574237512dca5f5467ef25768eecc",
+    "src/common.py": "80764cd9a60f41dee2e4b3e97b2ae91c464bab126202476e8e4c6931784b3b4d",
+    "src/compare_reproduction.py": "881f563cd30f4855c605f987bb27d5f8dd1dd918f09c2cd7d2d0e5d71e941cc5",
+    "src/evaluation.py": "6bddd1fc06a1eb270792e1d95309cf3417b7ed4e2a77ca4803e0bff04377fb8d",
+    "src/explain_rf.py": "0c7381011515873406896d9dde0d78e078a05adab67aaecfed1efb7ba6b32a89",
+    "src/plot_forest_shap.py": "e0a740474253a1f066892def7b40f2c343ceacbff186132859813ea5cce3581e",
+    "src/preprocessing_source.py": "cfbaf46f7dc1e8358e0b5bb38c8297e794449a29edd6dc8dc625bcf22a964785",
+    "src/reproduce_ab.py": "7a409a7973135178845531989e7407d6c075698a0fe754bf0cacbf7584885ad6",
+    "src/reproduction_metadata.py": "16294e712b52cd3e17983b650672a8d225b7d17a228605ad9f9b766dd94e2094",
+    "src/run_project.py": "9ac2f0e814c8489940da3f60b12f6ed7e537ca716bc08830f18048d886c1f41d",
+    "src/set_repository.py": "805d4a4ba8a2bb23ba40fbfadc3ea389d8d4840b06f2865e2404c3fba7e38fed",
+    "src/shap_compat.py": "4de6ccd6bc5a013570214e57d88c5d20d1aa9a9567758cf26444b2d329421e83",
+    "src/threshold_calibration.py": "20e741bca58b66cc18d6b578f9d751806cb2c3a1722204c453dd7e0e138ef455",
+    "src/train_logistic.py": "a6de8b3ee4865223276c5dab106d87e47a58ba17c987769c01a5c61df0fc58aa",
+    "src/train_rf.py": "09f6d6f6196531e0aacdccd7dae6115ec7fca50a44a10f3cac1797bbff455229",
+    "src/train_xgboost.py": "42c2ea54751d4da1d5649414d80c6e34e2cf37ac85044a10b0d9ae2b9e84560a",
+    "src/verification.py": "ae0bc10b0605afe19291bf1b65b000f05d9fd71cb039c9b2a6004a14fe6e969f",
+    "src/verify_e.py": "78657d88451ce198fb3e0596e5ce3fed2b324897c8843564482c494ec4312e3e",
+    "src/verify_shap_api.py": "712861a0b115c3519dbd00de28721bb22616652252fd0b21588410ac3e8b5e64",
+    "requirements-full.txt": "db042bef153bcf46344c31f67ff0b9c41119717924b471478d18a335b3e62aa1",
+    "requirements-notebooks.txt": "4cf2de0dee7e73367bf4bed73e605cc5bd60ef08fb43ddaafb245168a307e0c6",
+    "requirements.txt": "77235813faa3887dbe8bce8f9a9f19c29ea6839b18b3bb1d8f28e316882c92fd"
+  },
+  "reproducibility_scope": "fixed input files, folds, seed and documented algorithm settings; cross-version or cross-platform bitwise equality is not claimed"
+}

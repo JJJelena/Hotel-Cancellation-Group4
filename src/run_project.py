@@ -21,6 +21,9 @@ def main():
         run('verification.py','--project-root',ROOT,*(['--check-models'] if args.check_models else []))
         return
     output.mkdir(parents=True,exist_ok=True)
+    if args.stage in ['all','explain']:
+        run('check_environment.py','--project-root',ROOT,'--full',
+            '--output',output/'results/audit/environment_preflight.json')
     if args.stage in ['ab','all']:
         run('reproduce_ab.py','--root',ROOT,'--out',output/'results')
     if args.stage in ['dummy','all']:

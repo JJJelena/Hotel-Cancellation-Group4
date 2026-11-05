@@ -1,0 +1,21 @@
+{
+  "complete_workflow_finished": true,
+  "exit_code": 0,
+  "source_commit": "54273e5e0f264bf32410b61c5704991506e904e9",
+  "source_repository": "https://github.com/JJJelena/Hotel-Cancellation-Group4",
+  "command": "python src/run_project.py --stage all --output-root ../run_original_all",
+  "execution_environment": "Windows CPython 3.12.14 scikit-learn 1.9.1 SHAP 0.54.1 XGBoost 3.2.0",
+  "stages": [
+    "A/B",
+    "Dummy",
+    "LR 12 candidates x 5 folds plus main and agent ablation",
+    "RF random 6 candidates x 5 folds",
+    "RF independent time 6 candidates x 5 expanding windows",
+    "RF final random/time/agent fits",
+    "400-test-row probability SHAP",
+    "XGBoost 3 candidates x 5 folds plus two final fits",
+    "OOF threshold and sigmoid calibration"
+  ],
+  "outputs_are_separate_from_reference": true,
+  "scope": "Original online source was fully executed. Delivered non-algorithmic fixes were validated separately."
+}

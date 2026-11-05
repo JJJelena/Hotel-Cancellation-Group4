@@ -1,0 +1,24 @@
+{
+  "all_python311_full_preflight": {
+    "status": "PASS_EXPECTED_REJECTION",
+    "process_returncode": 1,
+    "errors": [
+      "full requires Python 3.12 or newer; detected 3.11.2",
+      "shap is not installed; expected 0.54.1"
+    ],
+    "no_training_tables_or_models_created": true
+  },
+  "direct_explain_reference_protection": {
+    "status": "PASS_EXPECTED_REJECTION",
+    "process_returncode": 2,
+    "frozen_evidence_hashes_unchanged": true
+  },
+  "protected_file_hashes_before_and_after": {
+    "results\\audit\\e_verification.json": "16894d82f9f56d16c684935d59aee0c42159cd5a7502e8c430e88073bb8200ac",
+    "results\\audit\\integration_verification.json": "21bd08866df34b3f0409180ad066f04a4bf3ba06d833c45b5bb72c577ab38225",
+    "results\\shap\\random_explanation_summary.json": "fc26750672ad9aa331353242ff5f8ffcce3f5fa5a75e758f687741a968b37f8e",
+    "results\\shap\\random_exact_shap.npz": "c7b1e440eb742d93892fa67c9b7a7605d2a7dd0ad4f7319943fb55880b7070ab",
+    "results\\tables\\random_shap_importance.csv": "8a13fd750665ddf58f4bc05e900094f7624d31c2c04d4d034b4e6eb7354dbc35",
+    "results\\models\\random_forest_main.joblib": "64531ef1dd0bc1bf8bda9baea46322bbbe1a87cea40bc7cd3aef9cc5add0676f"
+  }
+}

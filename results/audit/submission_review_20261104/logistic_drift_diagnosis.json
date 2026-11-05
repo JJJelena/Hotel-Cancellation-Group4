@@ -1,0 +1,217 @@
+{
+  "main": {
+    "params_equal": true,
+    "reference_params": {
+      "C": 1.0,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 5000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fresh_params": {
+      "C": 1.0,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 5000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "reference_versions": {
+      "python": "3.13.17",
+      "sklearn": "1.9.1",
+      "pandas": "3.0.5",
+      "xgboost": null
+    },
+    "fresh_versions": {
+      "python": "3.12.14",
+      "sklearn": "1.9.1",
+      "pandas": "2.2.3",
+      "xgboost": "3.2.0"
+    },
+    "processed_names_equal": true,
+    "transformed_training_matrix_max_abs_difference": 1.4210854715202004e-14,
+    "reference_optimizer_diagnostics": {
+      "n_iter": [
+        156
+      ],
+      "max_iter": 5000,
+      "gradient_inf_norm_at_solution": 9.70810299483915e-05,
+      "objective_average_penalized_logloss": 0.4404059595800844,
+      "tol": 0.0001,
+      "iteration_limit_reached": false
+    },
+    "fresh_optimizer_diagnostics": {
+      "n_iter": [
+        149
+      ],
+      "max_iter": 5000,
+      "gradient_inf_norm_at_solution": 9.994053625143942e-05,
+      "objective_average_penalized_logloss": 0.4404158755155437,
+      "tol": 0.0001,
+      "iteration_limit_reached": false
+    },
+    "coef_max_abs_difference": 0.046058416369083144,
+    "intercept_abs_difference": 0.0015785708537408016,
+    "random_test_max_probability_difference_unrounded": 0.019598282225200103,
+    "random_test_mean_probability_difference_unrounded": 0.0013108603754226024,
+    "test_changed_decisions": 35,
+    "worst_test_rows": [
+      {
+        "row_id": 94396,
+        "reference_probability": 0.4726539953800676,
+        "fresh_probability": 0.4922522776052677,
+        "absolute_difference": 0.019598282225200103
+      },
+      {
+        "row_id": 77995,
+        "reference_probability": 0.5493759595797671,
+        "fresh_probability": 0.5345794172252292,
+        "absolute_difference": 0.014796542354537978
+      },
+      {
+        "row_id": 81438,
+        "reference_probability": 0.47511872121060866,
+        "fresh_probability": 0.4607938373328201,
+        "absolute_difference": 0.014324883877788575
+      },
+      {
+        "row_id": 94391,
+        "reference_probability": 0.5000424649515531,
+        "fresh_probability": 0.5124242434984305,
+        "absolute_difference": 0.012381778546877387
+      },
+      {
+        "row_id": 27124,
+        "reference_probability": 0.6319300213645019,
+        "fresh_probability": 0.6202965183317839,
+        "absolute_difference": 0.01163350303271804
+      }
+    ]
+  },
+  "no_agent": {
+    "params_equal": true,
+    "reference_params": {
+      "C": 1.0,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 5000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fresh_params": {
+      "C": 1.0,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 5000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "reference_versions": {
+      "python": "3.13.17",
+      "sklearn": "1.9.1",
+      "pandas": "3.0.5",
+      "xgboost": null
+    },
+    "fresh_versions": {
+      "python": "3.12.14",
+      "sklearn": "1.9.1",
+      "pandas": "2.2.3",
+      "xgboost": "3.2.0"
+    },
+    "processed_names_equal": true,
+    "transformed_training_matrix_max_abs_difference": 1.4210854715202004e-14,
+    "reference_optimizer_diagnostics": {
+      "n_iter": [
+        119
+      ],
+      "max_iter": 5000,
+      "gradient_inf_norm_at_solution": 9.605296086447098e-05,
+      "objective_average_penalized_logloss": 0.46483565339033306,
+      "tol": 0.0001,
+      "iteration_limit_reached": false
+    },
+    "fresh_optimizer_diagnostics": {
+      "n_iter": [
+        119
+      ],
+      "max_iter": 5000,
+      "gradient_inf_norm_at_solution": 9.60439710174787e-05,
+      "objective_average_penalized_logloss": 0.4648356649649485,
+      "tol": 0.0001,
+      "iteration_limit_reached": false
+    },
+    "coef_max_abs_difference": 0.00010118206209441816,
+    "intercept_abs_difference": 5.149971594398117e-06,
+    "random_test_max_probability_difference_unrounded": 0.00011260833267645598,
+    "random_test_mean_probability_difference_unrounded": 3.1683497044945488e-06,
+    "test_changed_decisions": 0,
+    "worst_test_rows": [
+      {
+        "row_id": 94396,
+        "reference_probability": 0.4236110388895335,
+        "fresh_probability": 0.42349843055685704,
+        "absolute_difference": 0.00011260833267645598
+      },
+      {
+        "row_id": 94391,
+        "reference_probability": 0.4310436841999817,
+        "fresh_probability": 0.4309519035388887,
+        "absolute_difference": 9.178066109299943e-05
+      },
+      {
+        "row_id": 94388,
+        "reference_probability": 0.7330824026731815,
+        "fresh_probability": 0.733012887007678,
+        "absolute_difference": 6.951566550350563e-05
+      },
+      {
+        "row_id": 94394,
+        "reference_probability": 0.13895583799662595,
+        "fresh_probability": 0.1389044584895987,
+        "absolute_difference": 5.137950702724381e-05
+      },
+      {
+        "row_id": 76663,
+        "reference_probability": 0.25229394869058996,
+        "fresh_probability": 0.25224814187508254,
+        "absolute_difference": 4.580681550742094e-05
+      }
+    ]
+  },
+  "fresh_log_convergence_warning_occurrences": 0,
+  "fit_performed_by_this_diagnostic": false,
+  "conclusion": "Interpretation must distinguish parameter mismatch, iteration exhaustion, termination tolerance and numerical runtime differences; no new fitting was performed."
+}

@@ -1,6 +1,15 @@
 {
+  "checked_date": "2026-11-04",
+  "group": 4,
+  "course": "KM6312",
+  "source_commit": "54273e5e0f264bf32410b61c5704991506e904e9",
+  "source_repository": "https://github.com/JJJelena/Hotel-Cancellation-Group4",
   "report_content_complete": true,
   "pdf_pages": 9,
+  "report_sha256": "42dc16f2f3f9930d3171a13c77582861c904055f687d6494bc7618dfbfb91cc0",
+  "paper": "Letter 612x792 PDF points",
+  "body_font": "Times-family Nimbus Roman",
+  "predominant_font_size_pdf_points": 9.963,
   "official_style_files_match": {
     "icml2026.sty": true,
     "icml2026.bst": true,
@@ -8,33 +17,22 @@
     "algorithmic.sty": true,
     "fancyhdr.sty": true
   },
-  "paper": "Letter 612x792 PDF points",
-  "body_font": "Times-compatible Nimbus Roman, official Times font family",
-  "predominant_font_size_pdf_points": 9.963,
-  "source_python_files_syntax_pass": 15,
+  "style_comparison_normalizes_windows_line_endings": true,
+  "source_python_files_syntax_pass": 19,
   "notebooks_syntax_pass": 16,
   "code_cells_syntax_pass": 139,
-  "standard_prediction_verification": "PASS: six standard prediction tables and saved-model re-prediction",
-  "e_probability_verification": "PASS: XGBoost, 114 threshold-grid rows, 12 final test comparisons, sigmoid refits and transformations",
-  "visual_review": "all nine final page PNGs inspected; no clipping, table overflow or missing author fields",
+  "reference_scientific_files_preserved": 68,
+  "online_b_four_files_unchanged": true,
+  "saved_result_and_model_checks": "PASS: six standard files and chronological/SHAP consistency",
+  "source_workflow": "Completed original online all command with independent rerun outputs; non-algorithmic source fixes tested separately",
+  "fresh_probability_check": "PASS, all three models read from the same full rerun directory",
+  "numeric_retraining_comparison": "19 subsets compared; measured differences retained, no bitwise-equality claim",
+  "presentation": "Five slides: four timed main slides and one backup, source-aligned notes; native chart/table and import checks passed",
   "all_teacher_submission_requirements_satisfied": false,
   "remaining_requirements": [
-    "Create and upload the actual GitHub repository, insert its URL and recompile the PDF",
-    "Record the required 15-minute all-member camera-on Zoom presentation and provide its recording URL/passcode"
+    "Record and submit the actual 15-minute Zoom presentation viewing URL and recording-access passcode"
   ],
-  "report_sha256": "3cbe1efe86ef3f0be7b8e0e3d1c8aa278518ac8cb3b104bb2c700be9df5c701e",
-  "fonts": [
-    "/AKHCZK+CMR10",
-    "/BZIVMZ+NimbusRomNo9L-Regu",
-    "/CAFSZL+CMSY10",
-    "/DDIEWW+CMEX10",
-    "/FKPJSN+CMMI7",
-    "/IHAIZV+NimbusRomNo9L-Medi",
-    "/IXFAWU+NimbusMonL-Regu",
-    "/JAGKKY+CMR7",
-    "/PVTTLK+CMSY7",
-    "/TQTHRL+NimbusRomNo9L-ReguItal",
-    "/VDVGTR+CMMI9",
-    "/YEUUOC+CMMI10"
-  ]
+  "zoom_placement_rule": "Teacher screenshot does not specify placement; use designated LMS field, or a short report-end availability section when only one file is allowed",
+  "github_changed_by_this_review": false,
+  "visual_review": "All final PDF pages and all five final PPTX slides rendered and inspected"
 }

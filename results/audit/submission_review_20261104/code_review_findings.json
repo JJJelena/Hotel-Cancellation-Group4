@@ -1,0 +1,53 @@
+{
+  "reviewed_repository": "final_review_20261104/repository",
+  "reviewed_head": "54273e5e0f264bf32410b61c5704991506e904e9",
+  "repository_modified": false,
+  "findings": [
+    {
+      "id": "CR01", "priority": 1,
+      "title": "Current requirements break the environment checker and contradict the split profiles",
+      "locations": [{"file":"requirements.txt","start":10,"end":12},{"file":"src/check_environment.py","start":42,"end":44}],
+      "evidence": "Running C:/Python311/python.exe src/check_environment.py --metadata-only raises ValueError: Unsupported requirement in requirements.txt: seaborn>=0.13,<0.14 before any JSON report is written. The base file also includes SHAP although full/notebook requirements and environment_manifest separate these optional components.",
+      "minimum_fix": "Restore the eight exact base pins; leave SHAP in requirements-full.txt and seaborn/JupyterLab in requirements-notebooks.txt. Refresh current profile hashes only."
+    },
+    {
+      "id": "CR02", "priority": 2,
+      "title": "Forest training requires optional SHAP package metadata",
+      "locations": [{"file":"src/train_rf.py","start":30,"end":35}],
+      "evidence": "prepare() unconditionally calls importlib.metadata.version('shap'). Once the base/full dependency split is restored, a supported base installation cannot execute stage forest even though SHAP is only needed by stage explain.",
+      "minimum_fix": "Record missing optional SHAP as null; keep required-package failures. Add full-profile preflight before stages all/explain, before lengthy fits."
+    },
+    {
+      "id": "CR03", "priority": 2,
+      "title": "E verification overwrites the submitted historical audit by default",
+      "locations": [{"file":"src/verify_e.py","start":102,"end":104}],
+      "evidence": "The documented default python src/verify_e.py --project-root . writes results/audit/e_verification.json. This replaces the supplied historical verification record with the current interpreter's check. verification.py already uses the safe runs/verification default.",
+      "minimum_fix": "Use project/runs/verification/e_verification.json unless --output is explicitly supplied."
+    },
+    {
+      "id": "CR04", "priority": 2,
+      "title": "E verifier mixes reference LR/RF predictions with newly reproduced calibration",
+      "locations": [{"file":"src/verify_e.py","start":20,"end":27},{"file":"src/verify_e.py","start":54,"end":56}],
+      "evidence": "--e-root controls new E outputs and XGBoost only; the loop still reads LR/RF probabilities from project. A fresh all run that differs numerically from historical LR/RF cannot be independently verified using its own complete prediction population.",
+      "minimum_fix": "Add --prediction-root for LR/RF prediction sources, preserving project as its backward-compatible default. For a fresh complete run pass --e-root RUN --prediction-root RUN."
+    },
+    {
+      "id": "CR05", "priority": 2,
+      "title": "Direct RF explanation invocation can overwrite frozen explanation evidence",
+      "locations": [{"file":"src/common.py","start":19,"end":21},{"file":"src/explain_rf.py","start":140,"end":144}],
+      "evidence": "common.OUT defaults to the source project's results directory. Unlike train_rf.py, explain_rf.py has no CLI guard and run() writes SHAP arrays, CSVs, plots and explanation JSON there. run_project routes it safely only when the wrapper is used.",
+      "minimum_fix": "Reject CLI runs whose output root resolves to the reference project, directing users to run_project.py --stage explain --output-root runs/reproduction."
+    }
+  ],
+  "confirmed_correct": [
+    "run_project all dispatches AB, Dummy, logistic, forest, explanation, XGBoost, then probability with a shared new output root; reference data remain inputs.",
+    "verification.py defaults to runs/verification and does not replace results/audit/integration_verification.json.",
+    "reproduce_ab.py retains the single-rounding fix, raw precision exports, training-only caps/scaler/KMeans, outcome-free semantic cluster naming, and readable single-column figures.",
+    "Supervised preprocessing is fitted inside each fold. A fixed folds are checked against row IDs.",
+    "Strict RF selection uses expanding windows of unique scheduled arrival dates within the earlier training period.",
+    "The shared chronological comparison reuses random-CV-selected settings; code metadata correctly discloses this limitation rather than claiming untouched temporal selection.",
+    "Threshold/calibration fitting excludes random-test labels. The residual dependence between base OOF models and calibration folds is explicitly documented as a non-nested training diagnostic.",
+    "SHAP converts inputs to float32, floors only parsed SHAP thresholds, verifies background routing and class-1 probability reconstruction, and does not mutate the fitted forest."
+  ],
+  "testing_scope": "AST/static code review, real environment-checker failure, B deterministic reproduction, and targeted safe regression checks. Full fresh training is run independently by the parent agent. No claim is made that a run made with the unmodified repository used the later patched source."
+}

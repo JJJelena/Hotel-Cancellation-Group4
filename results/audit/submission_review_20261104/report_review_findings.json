@@ -1,0 +1,89 @@
+{
+  "reviewed_repository": "final_review_20261104/repository",
+  "reviewed_head": "54273e5e0f264bf32410b61c5704991506e904e9",
+  "original_repository_modified": false,
+  "report_pdf": {
+    "path": "report/main.pdf",
+    "pages": 9,
+    "sha256": "d2550e153c2dd85bcc03e9985b960ce05aaad5757b1122d9bf98649f7c40150d",
+    "group": "4",
+    "course": "KM6312",
+    "repository_url": "https://github.com/JJJelena/Hotel-Cancellation-Group4",
+    "author_names_match_source": true,
+    "identity_and_repository_link_match_source": true,
+    "body_font": "Times-family Nimbus Roman; nominal LaTeX 10pt",
+    "layout_observation": "Nine pages rendered; contact-sheet review found no clipping, overlap, missing glyphs or broken tables. Root will compile and visually inspect the updated final PDF."
+  },
+  "scientific_review": {
+    "mandatory_numeric_or_conclusion_corrections_found": false,
+    "main_table": "All nine evaluation/model rows, six metrics per row, match the corresponding CSV values rounded to three decimal places.",
+    "thresholds": "All six model/probability variants select the documented OOF-F1-maximising grid threshold; random-test results match these fixed thresholds.",
+    "reference_counts": "119390 raw rows and 32 columns; 118564 cleaned rows and 32 columns; 44176 cancellations; no cleaned missing values; 31994 raw duplicates and 33985 cleaned duplicates excluding row_id.",
+    "time_scope": "The report correctly separates the shared later-arrival refit, whose parameter-selection rows overlap the later test, from the separately tuned chronological forest. It does not infer a causal leakage effect from their difference.",
+    "shap": "The 400-row grouped SHAP reconstruction has maximum error 4.487691007692973e-8, consistent with the reported 4.49e-8; importance units and noncausal scope are correct.",
+    "probability_scope": "Calibration and threshold fitting use training-derived predictions; the report acknowledges post-selection and non-nested dependencies, and retains raw RF as the benchmark rather than selecting it from calibration test results.",
+    "figures": "Three of four report PDF figures are byte-identical to results figures. The calibration figure differs only in creation metadata; its page-content stream and extracted labels are identical.",
+    "outputs": "outputs contains a raw missing-values report. Every per-column count matches the original raw CSV; its nonzero raw missing counts do not contradict the clean-data no-missing claim.",
+    "evidence": "report_numeric_checks.json"
+  },
+  "submission_tone_scan": {
+    "explicit_AI_ChatGPT_generation_markers": "not detected in report tex/bib or rendered report text",
+    "TODO_TBD_placeholders": "not detected in formal report",
+    "discussion_scope": "The discussion and conclusion are coherent, answer RQ1-RQ4, and contain legitimate limitations rather than unresolved editing instructions."
+  },
+  "findings": [
+    {
+      "priority": "P2",
+      "file": "report/study.tex",
+      "line": 95,
+      "issue": "The phrase 'should not be presented as a wholly unexpected discovery' addresses a writer rather than stating the scientific interpretation.",
+      "action": "Replaced in the new final-delivery copy with a direct statement linking the segment to prior cancellation history.",
+      "status": "fixed_in_new_delivery_copy_only"
+    },
+    {
+      "priority": "P2",
+      "file": "report/study.tex",
+      "line": 136,
+      "issue": "The sentence 'A statement that the forest is best on every metric would be incorrect' is report-writing guidance.",
+      "action": "Replaced in the new copy by the supported comparison: stronger forest ranking, better logistic recall and F1 at the common threshold.",
+      "status": "fixed_in_new_delivery_copy_only"
+    },
+    {
+      "priority": "P2",
+      "file": "report/study.tex",
+      "line": 165,
+      "issue": "The instruction that figures 'must not be relabelled' as boosted-tree explanations belongs in an internal handoff, not the final paper.",
+      "action": "Replaced in the new copy by a direct statement that the attributions apply to the saved forest and its explanation sample.",
+      "status": "fixed_in_new_delivery_copy_only"
+    },
+    {
+      "priority": "P2",
+      "file": "report/main.pdf",
+      "line": null,
+      "issue": "The PDF Subject metadata inherits 'Proceedings of the International Conference on Machine Learning 2026' from the official style, although this is a KM6312 course project.",
+      "source_location": "report/icml2026.sty:187",
+      "action": "Added a pdfsubject override after loading the official style in the new copy's report/main.tex. The official style file is unchanged.",
+      "status": "source_fixed_in_new_delivery_copy_pending_root_compile"
+    },
+    {
+      "priority": "P3",
+      "file": "report/reproducibility.tex",
+      "line": 1,
+      "issue": "The appendix accurately describes prior verification but uses integration-process phrasing and omits the new full-chain execution now in progress.",
+      "action": "Await the actual completed run record, then rewrite the appendix in formal academic prose with only verified execution scope; no premature full-retraining claim.",
+      "status": "pending_root_full_chain_result"
+    },
+    {
+      "priority": "P3",
+      "file": "README.md",
+      "line": 60,
+      "issue": "The old 'Set the real repository URL' instruction, example OWNER/REPOSITORY and 'URL is not fabricated' wording are stale now that the real URL is present.",
+      "action": "Root can replace this with the actual repository URL and a factual metadata-editing note.",
+      "status": "reported_to_root_outside_formal_report"
+    }
+  ],
+  "new_delivery_copy_changed_files": [
+    "Hotel_Cancellation_Group4_提交终稿_20261104/02_GitHub_Project/Hotel_Cancellation_Group4/report/study.tex",
+    "Hotel_Cancellation_Group4_提交终稿_20261104/02_GitHub_Project/Hotel_Cancellation_Group4/report/main.tex"
+  ]
+}

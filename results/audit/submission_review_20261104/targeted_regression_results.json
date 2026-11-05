@@ -1,0 +1,72 @@
+{
+  "original_ast_parse": {
+    "status": "PASS",
+    "files": 19
+  },
+  "patched_ast_parse": {
+    "status": "PASS",
+    "files": 19
+  },
+  "original_checker_regression_reproduced": {
+    "returncode": 1,
+    "expected_unsupported_range_error": true
+  },
+  "current_profile_manifest_alignment": {
+    "status": "PASS",
+    "pin_counts": {
+      "base": 8,
+      "full": 9,
+      "notebooks": 10
+    },
+    "historical_manifest_sections_unchanged": true
+  },
+  "forest_audit_without_optional_shap": {
+    "status": "PASS",
+    "training_rows": 94851,
+    "fitted_models": 0,
+    "metadata_shap_is_null": true,
+    "observed_source_hash_matches": true
+  },
+  "b_reproduction": {
+    "status": "PASS",
+    "counts": [
+      59941,
+      18144,
+      19747,
+      14327,
+      6405
+    ],
+    "direct_round_two_decimals": [
+      28.45,
+      35.95,
+      51.32,
+      32.04,
+      91.73
+    ],
+    "no_target_used_for_fit": true
+  },
+  "all_preflight_stops_training": {
+    "status": "PASS",
+    "dispatched_commands": [
+      {
+        "command": [
+          "C:\\Python311\\python.exe",
+          "C:\\Users\\hp\\Documents\\ChatGPT\\K6312课程\\Hotel_Cancellation_Group4_提交终稿_20261104\\02_GitHub_Project\\Hotel_Cancellation_Group4\\src\\check_environment.py",
+          "--project-root",
+          "C:\\Users\\hp\\Documents\\ChatGPT\\K6312课程\\Hotel_Cancellation_Group4_提交终稿_20261104\\02_GitHub_Project\\Hotel_Cancellation_Group4",
+          "--full",
+          "--output",
+          "C:\\Users\\hp\\Documents\\ChatGPT\\K6312课程\\final_review_20261104\\audit_ab_tests\\dispatch_preflight\\results\\audit\\environment_preflight.json"
+        ],
+        "cwd": "C:\\Users\\hp\\Documents\\ChatGPT\\K6312课程\\Hotel_Cancellation_Group4_提交终稿_20261104\\02_GitHub_Project\\Hotel_Cancellation_Group4",
+        "output_root": "C:\\Users\\hp\\Documents\\ChatGPT\\K6312课程\\final_review_20261104\\audit_ab_tests\\dispatch_preflight"
+      }
+    ]
+  },
+  "e_verifier_source_boundaries": {
+    "status": "STATIC_CHECKED",
+    "fresh_prediction_root_option": true,
+    "safe_default_output": true,
+    "full_numeric_check": "Parent agent independently runs against fresh complete all-stage outputs."
+  }
+}

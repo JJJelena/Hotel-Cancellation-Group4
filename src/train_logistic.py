@@ -44,6 +44,7 @@ def main():
     sys.path.insert(0, str(project_root / 'src'))
     import evaluation as ev
     from preprocessing_source import load_shared_data
+    from reproduction_metadata import write_run_environment
     data = load_shared_data(project_root)
     plan = dict(n_train=len(data['random_train']), input_features=len(data['features']),
         C=[0.001, .01, .1, 1, 10, 100], class_weight=[None, 'balanced'],
@@ -58,6 +59,13 @@ def main():
     data['project_root'] = output_root
     tuning = output_root / 'results/tuning'
     tuning.mkdir(parents=True, exist_ok=True)
+    write_run_environment(output_root/'results/audit/logistic_run_environment.json',
+        project_root=project_root,stage='logistic_training',seed=ev.SEED,
+        thread_settings={'grid_search_n_jobs':args.n_jobs},
+        algorithm_settings={'C':plan['C'],'class_weight':plan['class_weight'],
+            'max_iter':5000,'selection':plan['selection'],
+            'decision_threshold':ev.DEFAULT_THRESHOLD,
+            'agent_ablation':not args.skip_ablation})
     pipe = ev.make_pipeline(data, LogisticRegression(max_iter=5000, random_state=ev.SEED))
     grid = {'model__C': plan['C'], 'model__class_weight': plan['class_weight']}
     scoring = dict(pr_auc='average_precision', roc_auc='roc_auc', f1='f1',

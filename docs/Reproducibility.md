@@ -1,5 +1,7 @@
 # Verification and retraining comparison
 
+The full source workflow was independently executed on 4 November 2026. See [complete validation and measured retraining differences](Full_Validation_20261104.md) and the dated audit records for its scope. Earlier checks below remain historical records.
+
 The submitted report describes the saved reference experiments. Verification of those files and retraining from source answer different questions.
 
 ## Saved reference verification
@@ -30,7 +32,7 @@ A stage-specific rerun may legitimately contain only some reference prediction f
 
 The reference protocol uses seed 42, 160 forest trees with `n_jobs=10`, and histogram XGBoost with `n_jobs=6`. The revision retains these settings rather than silently changing the benchmark to one thread. Single-thread fitting can be a separately recorded diagnostic, but would not establish cross-platform equality by itself. XGBoost's documentation identifies floating-point summation order and multithreading as possible sources of small differences. Scikit-learn requires a fixed `random_state` to resolve random-forest fitting randomness, while version and platform changes still need explicit validation.
 
-## Revision checks that were actually run
+## Integration checks from 31 October 2026
 
 On the current Windows environment with Python 3.11.2, scikit-learn 1.9.1 and XGBoost 3.2.0, the full three-candidate, five-fold XGBoost experiment and its random/chronological refits were rerun. The selected configuration remained depth 7, 300 trees and learning rate 0.05. All 140,700 exported probabilities matched the reference values after CSV parsing, and AP, F1, Brier and decisions matched for each subset.
 

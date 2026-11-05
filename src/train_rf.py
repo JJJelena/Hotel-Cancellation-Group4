@@ -2,8 +2,9 @@
 from common import *
 import argparse,time,importlib.metadata
 from sklearn.model_selection import TimeSeriesSplit
+from reproduction_metadata import write_run_environment
 
-def prepare():
+def prepare(stage='forest'):
     d=shared_data();df=d['df'];features=d['features']
     files=[ROOT/'data/hotel_bookings_clean.csv',ROOT/'data/data_dictionary.csv',
         ROOT/'src/preprocessing_source.py',ROOT/'src/evaluation.py']
@@ -27,12 +28,26 @@ def prepare():
     p=OUT/'audit/experiment_protocol.json'
     if p.exists():assert json.loads(p.read_text(encoding='utf-8'))==protocol,'Frozen protocol changed'
     else:write_json(p,protocol)
-    versions={m:importlib.metadata.version(m) for m in ['numpy','pandas','scikit-learn','shap','matplotlib','scipy','joblib','nbformat']}
+    versions={}
+    for name in ['numpy','pandas','scikit-learn','shap','matplotlib','scipy','joblib','nbformat']:
+        try:
+            versions[name]=importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:
+            if name!='shap':
+                raise
+            versions[name]=None
     software=dict(python=platform.python_version(),packages=versions)
     version_path=OUT/'audit/software_versions.json'
     if version_path.exists():
         assert json.loads(version_path.read_text())==software,'Software changed; use a fresh results directory instead of cached fits'
     else:write_json(version_path,software)
+    write_run_environment(OUT/'audit/rf_run_environment.json',project_root=ROOT,
+        stage='random_forest_'+stage,seed=SEED,
+        thread_settings={'random_forest_n_jobs':10},
+        algorithm_settings={'n_estimators':160,'candidate_grid':GRID,
+            'class_weight':None,'decision_threshold':THRESHOLD,
+            'random_cv':'A-v4 fixed five stratified folds',
+            'strict_time_cv':'five expanding windows within earlier-arrival training'})
     rows=[]
     for exp,tkey,vkey in [('random','random_train','random_test'),('chronological','chrono_train','chrono_test'),('strict_chronological','chrono_train','chrono_test')]:
         tr,te=d[tkey],d[vkey];htr,hte=profile_hash(tr,features),profile_hash(te,features);seen=hte.isin(set(htr))
@@ -228,7 +243,7 @@ if __name__=='__main__':
     if OUT.parent.resolve() == ROOT.resolve():
         raise SystemExit('Use python src/run_project.py --stage forest --output-root runs/reproduction to preserve reference results.')
     parser=argparse.ArgumentParser();parser.add_argument('--stage',choices=['audit','random_tuning','standard','strict_tuning','strict','agent','summary','all'],default='audit')
-    args=parser.parse_args();d=prepare()
+    args=parser.parse_args();d=prepare(args.stage)
     if args.stage in ['random_tuning','all']:tune(d,'random')
     if args.stage in ['standard','all']:standard(d)
     if args.stage in ['strict_tuning','all']:tune(d,'strict_chronological')

@@ -19,9 +19,12 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--project-root',type=Path,default=Path(__file__).resolve().parents[1])
     parser.add_argument('--e-root',type=Path)
+    parser.add_argument('--prediction-root',type=Path,
+        help='LR/RF prediction root; defaults to project for the original E-only workflow.')
     parser.add_argument('--output',type=Path)
     args=parser.parse_args()
     project=args.project_root.resolve(); eroot=(args.e_root or project).resolve()
+    prediction_root=(args.prediction_root or project).resolve()
     sys.path.insert(0,str(project/'src'))
     import evaluation as ev
     results=eroot/'results'; checks={}
@@ -52,7 +55,7 @@ def main():
     train_ids=set(pd.read_csv(project/'data/splits/train_ids.csv').row_id)
     fixed_folds=pd.read_csv(project/'data/splits/cv_folds.csv').set_index('row_id').cv_fold
     for name in ['logistic_regression','random_forest','xgboost']:
-        source=eroot if name=='xgboost' else project
+        source=eroot if name=='xgboost' else prediction_root
         base=pd.read_csv(source/'results/predictions'/f'{name}_main_predictions.csv')
         raw_test=base.query("experiment == 'random' and subset == 'test'").sort_values('row_id').reset_index(drop=True)
         raw_oof=base.query("experiment == 'random' and subset == 'validation'").sort_values('row_id').reset_index(drop=True)
@@ -99,7 +102,7 @@ def main():
         checks[name]='PASS: row IDs/labels/folds, 38 OOF grid rows, tie rule, sigmoid OOF refits, final calibrator refit and test transforms, four final test rows'
     checks['status']='PASS'
     checks['scope']='Independent recomputation of exported results; does not convert selected-model OOF or shared temporal transfer into strict nested/temporal validation.'
-    path=args.output or results/'audit/e_verification.json'
+    path=args.output or project/'runs/verification/e_verification.json'
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(checks,indent=2),encoding='utf-8')
     print(json.dumps(checks,indent=2))

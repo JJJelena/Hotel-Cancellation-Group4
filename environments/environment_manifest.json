@@ -5,7 +5,7 @@
   "current_profiles": {
     "base": {
       "requirements_file": "requirements.txt",
-      "file_sha256": "2ed68246592d3b9e0c11c3707e4ccb6abc27bdd7948de311bfa5f65564ce5f09",
+      "file_sha256": "f28db0867847ef109b34952071d9b39d89280108c6b7fa981ee6c0818b79b9f5",
       "minimum_python": ">=3.11",
       "recommended_python": "3.12",
       "purpose": "Saved-result verification, clustering and classifier training without SHAP.",
@@ -23,7 +23,7 @@
     },
     "full": {
       "requirements_file": "requirements-full.txt",
-      "file_sha256": "0d7665a44482e99d2cfa365f65105d55136558bc5d0c327a87975ba63fb20ec4",
+      "file_sha256": "db042bef153bcf46344c31f67ff0b9c41119717924b471478d18a335b3e62aa1",
       "minimum_python": ">=3.12",
       "recommended_python": "3.12",
       "purpose": "Complete command-line workflow including RF Tree SHAP.",
@@ -42,7 +42,7 @@
     },
     "notebooks": {
       "requirements_file": "requirements-notebooks.txt",
-      "file_sha256": "69856529970d125c1aa6eed5deee7560c643ca6db30c3cbab056db32517350ef",
+      "file_sha256": "4cf2de0dee7e73367bf4bed73e605cc5bd60ef08fb43ddaafb245168a307e0c6",
       "minimum_python": ">=3.11",
       "recommended_python": "3.12",
       "purpose": "Base profile plus notebook UI and EDA plotting; install full separately for SHAP.",

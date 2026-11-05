@@ -42,7 +42,15 @@ def main():
     sys.path.insert(0, str(source/'src'))
     import evaluation as ev
     from preprocessing_source import load_shared_data
+    from reproduction_metadata import write_run_environment
     data = load_shared_data(source)
+    write_run_environment(output/'results/audit/xgboost_run_environment.json',
+        project_root=source,stage='xgboost_training',seed=42,
+        thread_settings={'xgboost_n_jobs':6},
+        algorithm_settings={'candidate_grid':CANDIDATES,
+            'fixed_classifier_settings':classifier({}).get_params(),
+            'selection':'highest mean fixed-five-fold training average precision',
+            'decision_threshold':ev.DEFAULT_THRESHOLD})
     tr, te = data['random_train'], data['random_test']
     features = data['features']
     y = tr.is_canceled.to_numpy()

@@ -1,0 +1,72 @@
+{
+  "source_repository_modified": false,
+  "target_project": "C:\\Users\\hp\\Documents\\ChatGPT\\K6312课程\\Hotel_Cancellation_Group4_提交终稿_20261104\\02_GitHub_Project\\Hotel_Cancellation_Group4",
+  "model_protocol_changed": false,
+  "readme_report_presentations_modified_by_this_agent": false,
+  "changed_files": [
+    {
+      "path": "requirements.txt",
+      "source_sha256": "77235813faa3887dbe8bce8f9a9f19c29ea6839b18b3bb1d8f28e316882c92fd",
+      "patched_sha256": "f28db0867847ef109b34952071d9b39d89280108c6b7fa981ee6c0818b79b9f5"
+    },
+    {
+      "path": "environments/environment_manifest.json",
+      "source_sha256": "485e0e7c25df9b0b980ae910717e708d59babd8d4e948d21f0d1a6b4d508bc88",
+      "patched_sha256": "c42ec3e8512007a38527ab0390d3ceb33bdc19d2c1e6cc5b94af9513761b5635"
+    },
+    {
+      "path": "src/run_project.py",
+      "source_sha256": "9ac2f0e814c8489940da3f60b12f6ed7e537ca716bc08830f18048d886c1f41d",
+      "patched_sha256": "aaa0cf361d73bbffe0eaac045a0cac67d6f229084e0a6e7a7e16821117d33394"
+    },
+    {
+      "path": "src/train_rf.py",
+      "source_sha256": "09f6d6f6196531e0aacdccd7dae6115ec7fca50a44a10f3cac1797bbff455229",
+      "patched_sha256": "98f3e96e95545c3b3e421021650e2573dbdee147c1ee61209c3be0236bc244a1"
+    },
+    {
+      "path": "src/train_logistic.py",
+      "source_sha256": "a6de8b3ee4865223276c5dab106d87e47a58ba17c987769c01a5c61df0fc58aa",
+      "patched_sha256": "097d8ccb12f7dbbcb0b0064c23d88729dd20686507e3a5580c7737d6d120f223"
+    },
+    {
+      "path": "src/train_xgboost.py",
+      "source_sha256": "42c2ea54751d4da1d5649414d80c6e34e2cf37ac85044a10b0d9ae2b9e84560a",
+      "patched_sha256": "6953e157d660f13ff86afe32ca03f0d3ad579225423d4ff399af91fb84b99e1e"
+    },
+    {
+      "path": "src/verify_e.py",
+      "source_sha256": "78657d88451ce198fb3e0596e5ce3fed2b324897c8843564482c494ec4312e3e",
+      "patched_sha256": "57a7e6246225bae679be2ec27986121ac8e9b0ab48f056a9f515c224b7062da6"
+    },
+    {
+      "path": "src/explain_rf.py",
+      "source_sha256": "0c7381011515873406896d9dde0d78e078a05adab67aaecfed1efb7ba6b32a89",
+      "patched_sha256": "367dee362fb144044b4b22ec354f05fd31dc2e464fa3ea59321b4779e7ed502a"
+    },
+    {
+      "path": "src/compare_reproduction.py",
+      "source_sha256": "881f563cd30f4855c605f987bb27d5f8dd1dd918f09c2cd7d2d0e5d71e941cc5",
+      "patched_sha256": "eaab4e05874363b46b5d8939891179e17c1f16a5ad3b5d50d0d1b2b981ff23d8"
+    }
+  ],
+  "tests": {
+    "base_python311": "PASS, with workspace integration_work/ml_packages on PYTHONPATH for XGBoost",
+    "full_python312": "PASS with all imports and exact pins",
+    "b_kmeans_reproduction": "PASS",
+    "optional_shap_forest_audit": "PASS; audit only, no forest fitting",
+    "actual_python311_all_full_preflight": "PASS expected rejection before fitting",
+    "actual_direct_explain_reference_guard": "PASS expected rejection; frozen evidence hashes unchanged",
+    "fresh_all_numeric_verification": "Performed separately by parent; no claim that original-source all run used patched source."
+  },
+  "lr_drift_diagnosis": {
+    "parameter_mismatch": false,
+    "max_iter_exhaustion": false,
+    "same_tol": 0.0001,
+    "reference_iterations": 156,
+    "fresh_iterations": 149,
+    "reference_gradient_inf_norm": 9.70810299483915e-05,
+    "fresh_gradient_inf_norm": 9.994053625143942e-05,
+    "recommendation": "Keep the reported model protocol and disclose measured retraining differences; do not alter solver/max_iter/tol to chase one reference fit."
+  }
+}
